@@ -35,10 +35,5 @@
       <version>4.8.2</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>colt</groupId>
-      <artifactId>colt</artifactId>
-      <version>${colt.version}</version>
-    </dependency>
   </dependencies>
 </project>
