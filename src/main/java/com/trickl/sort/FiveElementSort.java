@@ -24,11 +24,22 @@ import com.trickl.math.Permutator;
 import com.trickl.math.StandardPermutator;
 import java.util.Comparator;
 
+/**
+ * An optimal five element sort that only uses seven comparisons
+ * @author tgee
+ */
 public class FiveElementSort implements Sorter {
 
    private static final NaturalOrderingComparator naturalOrderingComparator = new NaturalOrderingComparator();
    private Permutator permutator = new StandardPermutator();
 
+   /**
+    * Sort a range in the array
+    * @param S The array
+    * @param start The index of the first element in the range to sort
+    * @param end Unused, instead start + 4 is always the last element in the range.
+    * @return The array
+    */
    @Override
    public char[] sort(char[] S, int start, int end) {
       int i0 = start;
@@ -142,6 +153,13 @@ public class FiveElementSort implements Sorter {
       return S;
    }
 
+   /**
+    * Sort a range in the array
+    * @param S The array
+    * @param start The index of the first element in the range to sort
+    * @param end Unused, instead start + 4 is always the last element in the range.
+    * @return The array
+    */
    @Override
    public short[] sort(short[] S, int start, int end) {
       int i0 = start;
@@ -255,6 +273,13 @@ public class FiveElementSort implements Sorter {
       return S;
    }
 
+   /**
+    * Sort a range in the array
+    * @param S The array
+    * @param start The index of the first element in the range to sort
+    * @param end Unused, instead start + 4 is always the last element in the range.
+    * @return The array
+    */
    @Override
    public double[] sort(double[] S, int start, int end) {
       int i0 = start;
@@ -368,6 +393,13 @@ public class FiveElementSort implements Sorter {
       return S;
    }
 
+   /**
+    * Sort a range in the array
+    * @param S The array
+    * @param start The index of the first element in the range to sort
+    * @param end Unused, instead start + 4 is always the last element in the range.
+    * @return The array
+    */
    @Override
    public float[] sort(float[] S, int start, int end) {
       int i0 = start;
@@ -481,6 +513,13 @@ public class FiveElementSort implements Sorter {
       return S;
    }
 
+   /**
+    * Sort a range in the array
+    * @param S The array
+    * @param start The index of the first element in the range to sort
+    * @param end Unused, instead start + 4 is always the last element in the range.
+    * @return The array
+    */
    @Override
    public int[] sort(int[] S, int start, int end) {
       int i0 = start;
@@ -593,6 +632,15 @@ public class FiveElementSort implements Sorter {
       return S;
    }
 
+   /**
+    * Sort a range in the array
+    * @param <T> The data type of the array
+    * @param S The array
+    * @param start The index of the first element in the range to sort
+    * @param end Unused, instead start + 4 is always the last element in the range.
+    * @param comparator The comparator to define the sort order
+    * @return The array
+    */
    @Override
    public <T> T[] sort(T[] S, int start, int end, Comparator<T> comparator) {
       if (comparator == null) {
@@ -709,10 +757,18 @@ public class FiveElementSort implements Sorter {
       return S;
    }
 
+   /**
+    * Get the permutator used by this sorter
+    * @return The permutator used
+    */
    public Permutator getPermutator() {
       return permutator;
    }
 
+   /**
+    * Set the permutator used by this sorter
+    * @param permutator The permutator to use
+    */
    public void setPermutator(Permutator permutator) {
       this.permutator = permutator;
    }

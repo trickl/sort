@@ -23,6 +23,21 @@ package com.trickl.math;
 import com.trickl.sort.NaturalOrderingComparator;
 import java.util.Comparator;
 
+/**
+ * Utility class for performing common permutations using a Permutator.
+ * Including:
+ * lexiographicPermute: 
+ * See "A Discipline of Programming" by E. W. Dijkstra
+ * A function that, given a list of elements and a function that returns a 
+ * total ordering of those elements, produces the next lexicographic permutation
+ * of the list; for instance, the permutations of the list (1 2 3 4) in
+ * lexicographic order are 
+ * (1 2 3 4) (2 1 3 4) (1 3 2 4) (3 1 2 4) (2 3 1 4) (3 2 1 4) (1 2 4 3)
+ * (2 1 4 3) (1 4 2 3) (4 1 2 3) (2 4 1 3) (4 2 1 3) (1 3 4 2) (3 1 4 2) 
+ * (1 4 3 2) (4 1 3 2) (3 4 1 2) (4 3 1 2) (2 3 4 1) (3 2 4 1) (2 4 3 1) 
+ * (4 2 3 1) (3 4 2 1) (4 3 2 1). 
+ * @author tgee
+ */
 public final class Permutations {
 
    private static final NaturalOrderingComparator naturalOrderingComparator
@@ -31,11 +46,13 @@ public final class Permutations {
    private Permutations() {
    }
   
-   // See:
-   // Lexiographic permutation
-   // A Discipline of Programming
-   // E. W. Dijkstra
-   public static short[] permutation(short[] S, Permutator permutator) {
+   /**
+    * Lexiographic permutation.    
+    * @param S The array
+    * @param permutator The permutator to use for the permutation
+    * @return The array
+    */
+   public static short[] lexiographicPermute(short[] S, Permutator permutator) {
       // Find the position where lexiographic order
       // is not true
       int i = S.length - 2;
@@ -60,11 +77,13 @@ public final class Permutations {
       return S;
    }
 
-   // See:
-   // Lexiographic permutation
-   // A Discipline of Programming
-   // E. W. Dijkstra
-   public static char[] permutation(char[] S, Permutator permutator) {
+   /**
+    * Lexiographic permutation.
+    * @param S The array
+    * @param permutator The permutator to use for the permutation
+    * @return The array
+    */
+   public static char[] lexiographicPermute(char[] S, Permutator permutator) {
       // Find the position where lexiographic order
       // is not true
       int i = S.length - 2;
@@ -89,7 +108,13 @@ public final class Permutations {
       return S;
    }
 
-   public static int[] permutation(int[] S, Permutator permutator) {
+   /**
+    * Lexiographic permutation.
+    * @param S The array
+    * @param permutator The permutator to use for the permutation
+    * @return The array
+    */
+   public static int[] lexiographicPermute(int[] S, Permutator permutator) {
       // Find the position where lexiographic order
       // is not true
       int i = S.length - 2;
@@ -114,11 +139,13 @@ public final class Permutations {
       return S;
    }
 
-   // See:
-   // Lexiographic permutation
-   // A Discipline of Programming
-   // E. W. Dijkstra
-   public static float[] permutation(float[] S, Permutator permutator) {
+   /**
+    * Lexiographic permutation.
+    * @param S The array
+    * @param permutator The permutator to use for the permutation
+    * @return The array
+    */
+   public static float[] lexiographicPermute(float[] S, Permutator permutator) {
       // Find the position where lexiographic order
       // is not true
       int i = S.length - 2;
@@ -143,11 +170,13 @@ public final class Permutations {
       return S;
    }
 
-   // See:
-   // Lexiographic permutation
-   // A Discipline of Programming
-   // E. W. Dijkstra
-   public static double[] permutation(double[] S, Permutator permutator) {
+   /**
+    * Lexiographic permutation.
+    * @param S The array
+    * @param permutator The permutator to use for the permutation
+    * @return The array
+    */
+   public static double[] lexiographicPermute(double[] S, Permutator permutator) {
       // Find the position where lexiographic order
       // is not true
       int i = S.length - 2;
@@ -172,11 +201,15 @@ public final class Permutations {
       return S;
    }
 
-   // See:
-   // Lexiographic permutation
-   // A Discipline of Programming
-   // E. W. Dijkstra
-   public static <T> T[] permutation(T[] S, Permutator permutator, Comparator<T> comparator) {
+   /**
+    * Lexiographic permutation.
+    * @param <T> The type of the array
+    * @param S The array
+    * @param permutator The permutator to use for the permutation
+    * @param comparator The comparator to define the order of elements
+    * @return The array
+    */
+   public static <T> T[] lexiographicPermute(T[] S, Permutator permutator, Comparator<T> comparator) {
       if (comparator == null) comparator = naturalOrderingComparator;
       // Find the position where lexiographic order
       // is not true
@@ -202,8 +235,15 @@ public final class Permutations {
       return S;
    }
 
-   public static <T> T[] permutation(T[] S, Permutator permutator)
+   /**
+    * Lexiographic permutation.
+    * @param <T> The type of the array
+    * @param S The array
+    * @param permutator The permutator to use for the permutation
+    * @return The array
+    */
+   public static <T> T[] lexiographicPermute(T[] S, Permutator permutator)
    {
-      return permutation(S, permutator, null);
+      return lexiographicPermute(S, permutator, null);
    }
 }

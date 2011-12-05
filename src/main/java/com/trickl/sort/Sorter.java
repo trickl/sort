@@ -22,11 +22,58 @@ package com.trickl.sort;
 
 import java.util.Comparator;
 
+/**
+ * Defines a standard interface for many sorting algorithms.
+ * @author tgee
+ */
 public interface Sorter {
+   /**
+    * Sort a range in the array
+    * @param S The array
+    * @param start The index of the first element in the range to sort
+    * @param end The index of the last element in the range to sort
+    * @return The array
+    */
    short[] sort(short[] S, int start, int end);
+   /**
+    * Sort a range in the array
+    * @param S The array
+    * @param start The index of the first element in the range to sort
+    * @param end The index of the last element in the range to sort
+    * @return The array
+    */
    char[] sort(char[] S, int start, int end);
+   /**
+    * Sort a range in the array
+    * @param S The array
+    * @param start The index of the first element in the range to sort
+    * @param end The index of the last element in the range to sort
+    * @return The array
+    */
    double[] sort(double[] S, int start, int end);
+   /**
+    * Sort a range in the array
+    * @param S The array
+    * @param start The index of the first element in the range to sort
+    * @param end The index of the last element in the range to sort
+    * @return The array
+    */
    float[] sort(float[] S, int start, int end);
+   /**
+    * Sort a range in the array
+    * @param S The array
+    * @param start The index of the first element in the range to sort
+    * @param end The index of the last element in the range to sort
+    * @return The array
+    */
    int[] sort(int[] S, int start, int end);
+   /**
+    * Sort a range in the array
+    * @param <T> The data type of the array
+    * @param S The array
+    * @param start The index of the first element in the range to sort
+    * @param end The index of the last element in the range to sort
+    * @return The array
+    */
    <T> T[] sort(T[] S, int start, int end, Comparator<T> comparator);
 }

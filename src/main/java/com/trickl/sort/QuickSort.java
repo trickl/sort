@@ -24,6 +24,10 @@ import com.trickl.math.Permutator;
 import com.trickl.math.StandardPermutator;
 import java.util.Comparator;
 
+/**
+ * http://en.wikipedia.org/wiki/Quicksort
+ * @author tgee
+ */
 public final class QuickSort implements Sorter {
 
    private static final NaturalOrderingComparator naturalOrderingComparator = new NaturalOrderingComparator();
@@ -31,6 +35,13 @@ public final class QuickSort implements Sorter {
    private InsertionSort insertionSort = new InsertionSort();
    private Permutator permutator = new StandardPermutator();
 
+   /**
+    * Sort a range in the array
+    * @param S The array
+    * @param start The index of the first element in the range to sort
+    * @param end The index of the last element in the range to sort
+    * @return The array
+    */
    @Override
    public char[] sort(char[] S, int start, int end) {
       if (end > start) {
@@ -55,6 +66,13 @@ public final class QuickSort implements Sorter {
       return S;
    }
 
+   /**
+    * Sort a range in the array
+    * @param S The array
+    * @param start The index of the first element in the range to sort
+    * @param end The index of the last element in the range to sort
+    * @return The array
+    */
    @Override
    public short[] sort(short[] S, int start, int end) {
       if (end > start) {
@@ -79,6 +97,13 @@ public final class QuickSort implements Sorter {
       return S;
    }
 
+   /**
+    * Sort a range in the array
+    * @param S The array
+    * @param start The index of the first element in the range to sort
+    * @param end The index of the last element in the range to sort
+    * @return The array
+    */
    @Override
    public double[] sort(double[] S, int start, int end) {
       if (end > start) {
@@ -103,6 +128,13 @@ public final class QuickSort implements Sorter {
       return S;
    }
 
+   /**
+    * Sort a range in the array
+    * @param S The array
+    * @param start The index of the first element in the range to sort
+    * @param end The index of the last element in the range to sort
+    * @return The array
+    */
    @Override
    public float[] sort(float[] S, int start, int end) {
       if (end > start) {
@@ -127,6 +159,13 @@ public final class QuickSort implements Sorter {
       return S;
    }
 
+   /**
+    * Sort a range in the array
+    * @param S The array
+    * @param start The index of the first element in the range to sort
+    * @param end The index of the last element in the range to sort
+    * @return The array
+    */
    @Override
    public int[] sort(int[] S, int start, int end) {
       if (end > start) {
@@ -151,6 +190,14 @@ public final class QuickSort implements Sorter {
       return S;
    }
 
+   /**
+    * Sort a range in the array
+    * @param <T> The data type of the array
+    * @param S The array
+    * @param start The index of the first element in the range to sort
+    * @param end The index of the last element in the range to sort
+    * @return The array
+    */
    @Override
    public <T> T[] sort(T[] S, int start, int end, Comparator<T> comparator) {      
       if (end > start) {
@@ -177,6 +224,14 @@ public final class QuickSort implements Sorter {
       return S;
    }
 
+   /**
+    * Sort a range in the array
+    * @param <T> The data type of the array
+    * @param S The array
+    * @param start The index of the first element in the range to sort
+    * @param end The index of the last element in the range to sort
+    * @return The array
+    */
    public <T> T[] sort(T[] S, int start, int end) {
       return sort(S, start, end, null);
    }
@@ -218,11 +273,19 @@ public final class QuickSort implements Sorter {
               : (comparator.compare(S[b], S[c]) > 0 ? b
               : comparator.compare(S[a], S[c]) > 0 ? c : a));
    }
-
+   
+   /**
+    * Get the permutator used by the partitioner
+    * @return The permutator
+    */
    public Permutator getPermutator() {
       return permutator;
    }
 
+   /**
+    * Set the permutator used by the partitioner
+    * @param permutator The permutator to use
+    */
    public void setPermutator(Permutator permutator) {
       this.permutator = permutator;
       this.insertionSort.setPermutator(permutator);

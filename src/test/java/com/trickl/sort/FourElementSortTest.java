@@ -47,7 +47,7 @@ public class FourElementSortTest {
       double[] inputArray = new double[]{1, 2, 3, 4};
       for (int permutation = 0; permutation < totalPermutations; ++permutation) {
          for (int i = 0; i < permutation; ++i) {
-            Permutations.permutation(inputArray, new StandardPermutator());
+            Permutations.lexiographicPermute(inputArray, new StandardPermutator());
          }
          sorter.sort(inputArray, 0, inputArray.length);
          Assert.assertArrayEquals(inputArray, new double[]{1, 2, 3, 4}, tolerance);
@@ -61,7 +61,7 @@ public class FourElementSortTest {
       int[] inputArray = new int[]{1, 2, 3, 4};
       for (int permutation = 0; permutation < totalPermutations; ++permutation) {
          for (int i = 0; i < permutation; ++i) {
-            Permutations.permutation(inputArray, new StandardPermutator());
+            Permutations.lexiographicPermute(inputArray, new StandardPermutator());
          }
          sorter.sort(inputArray, 0, inputArray.length);
          Assert.assertArrayEquals(inputArray, new int[]{1, 2, 3, 4});
@@ -75,7 +75,7 @@ public class FourElementSortTest {
       Integer[] inputArray = new Integer[]{1, 2, 3, 4};
       for (int permutation = 0; permutation < totalPermutations; ++permutation) {
          for (int i = 0; i < permutation; ++i) {
-            Permutations.permutation(inputArray, new StandardPermutator());
+            Permutations.lexiographicPermute(inputArray, new StandardPermutator());
          }
          sorter.sort(inputArray, 0, inputArray.length, null);
          Assert.assertArrayEquals(inputArray, new Integer[]{1, 2, 3, 4});
@@ -89,7 +89,7 @@ public class FourElementSortTest {
       Integer[] inputArray = new Integer[]{1, 2, 3, 4};
       for (int permutation = 0; permutation < totalPermutations; ++permutation) {
          for (int i = 0; i < permutation; ++i) {
-            Permutations.permutation(inputArray, new StandardPermutator());
+            Permutations.lexiographicPermute(inputArray, new StandardPermutator());
          }
          sorter.sort(inputArray, 0, inputArray.length, Collections.reverseOrder());
          Assert.assertArrayEquals(inputArray, new Integer[]{4, 3, 2, 1});

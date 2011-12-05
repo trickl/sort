@@ -33,6 +33,8 @@ import java.util.Comparator;
  * Recursive selection algorithm, theoretical O(n) worst complexity.
  * Detailed in "Foundations of algorithms using Java pseudocode"
  * By R E. Neapolitan, K Naimipour
+ * Also see: 
+ * http://en.wikipedia.org/wiki/Selection_algorithm#Linear_general_selection_algorithm_-_Median_of_Medians_algorithm
  * @author tgee
  */
 public class MedianOfMedians implements SelectionAlgorithm {
@@ -42,6 +44,15 @@ public class MedianOfMedians implements SelectionAlgorithm {
    private static final QuickSort indexPairedSorter = new QuickSort();     
    private static final ThreeWayPartitioner indexPairedPartitioner = new ThreeWayPartitioner();
 
+   /**
+    * Select the kth element in the range of an array
+    * @param S The array
+    * @param freq The frequency of elements in the array, if null freq(element) = 1
+    * @param start The first element in the range
+    * @param end The last element in the range
+    * @param k
+    * @return The index of the kth element
+    */
    @Override
    public int select(char[] S, int[] freq, int start, int end, int k) {
       // Non-destructive selection
@@ -54,6 +65,15 @@ public class MedianOfMedians implements SelectionAlgorithm {
       return index[select(copyS, freq, index, start, end, k)];
    }
    
+   /**
+    * Select the kth element in the range of an array
+    * @param S The array
+    * @param freq The frequency of elements in the array, if null freq(element) = 1
+    * @param start The first element in the range
+    * @param end The last element in the range
+    * @param k
+    * @return The index of the kth element
+    */
    protected int select(char[] S, int[] freq, int[] index, int start, int end, int k) {
 
       if (end == (start + 1)) {
@@ -77,6 +97,15 @@ public class MedianOfMedians implements SelectionAlgorithm {
       }
    }
 
+   /**
+    * Select the kth element in the range of an array
+    * @param S The array
+    * @param freq The frequency of elements in the array, if null freq(element) = 1
+    * @param start The first element in the range
+    * @param end The last element in the range
+    * @param k
+    * @return The index of the kth element
+    */
    @Override
    public int select(short[] S, int[] freq, int start, int end, int k) {
       // Non-destructive selection
@@ -89,6 +118,15 @@ public class MedianOfMedians implements SelectionAlgorithm {
       return index[select(copyS, freq, index, start, end, k)];
    }
 
+   /**
+    * Select the kth element in the range of an array
+    * @param S The array
+    * @param freq The frequency of elements in the array, if null freq(element) = 1
+    * @param start The first element in the range
+    * @param end The last element in the range
+    * @param k
+    * @return The index of the kth element
+    */
    protected int select(short[] S, int[] freq, int[] index, int start, int end, int k) {
 
       if (end == (start + 1)) {
@@ -112,6 +150,15 @@ public class MedianOfMedians implements SelectionAlgorithm {
       }
    }
 
+   /**
+    * Select the kth element in the range of an array
+    * @param S The array
+    * @param freq The frequency of elements in the array, if null freq(element) = 1
+    * @param start The first element in the range
+    * @param end The last element in the range
+    * @param k
+    * @return The index of the kth element
+    */
    @Override
    public int select(double[] S, int[] freq, int start, int end, int k) {
       // Non-destructive selection
@@ -124,6 +171,15 @@ public class MedianOfMedians implements SelectionAlgorithm {
       return index[select(copyS, freq, index, start, end, k)];
    }
 
+   /**
+    * Select the kth element in the range of an array
+    * @param S The array
+    * @param freq The frequency of elements in the array, if null freq(element) = 1
+    * @param start The first element in the range
+    * @param end The last element in the range
+    * @param k
+    * @return The index of the kth element
+    */
    protected int select(double[] S, int[] freq, int[] index, int start, int end, int k) {
 
       if (end == (start + 1)) {
@@ -147,7 +203,16 @@ public class MedianOfMedians implements SelectionAlgorithm {
       }
    }
 
-  @Override
+   /**
+    * Select the kth element in the range of an array
+    * @param S The array
+    * @param freq The frequency of elements in the array, if null freq(element) = 1
+    * @param start The first element in the range
+    * @param end The last element in the range
+    * @param k
+    * @return The index of the kth element
+    */
+   @Override
    public int select(float[] S, int[] freq, int start, int end, int k) {
       // Non-destructive selection
       float[] copyS = Arrays.copyOf(S, S.length);
@@ -159,7 +224,16 @@ public class MedianOfMedians implements SelectionAlgorithm {
       return index[select(copyS, freq, index, start, end, k)];
    }
 
-   protected int select(float[] S, int[] freq, int[] index, int start, int end, int k) {
+  /**
+    * Select the kth element in the range of an array
+    * @param S The array
+    * @param freq The frequency of elements in the array, if null freq(element) = 1
+    * @param start The first element in the range
+    * @param end The last element in the range
+    * @param k
+    * @return The index of the kth element
+    */
+  protected int select(float[] S, int[] freq, int[] index, int start, int end, int k) {
 
       if (end == (start + 1)) {
          return start;
@@ -182,7 +256,16 @@ public class MedianOfMedians implements SelectionAlgorithm {
       }
    }
 
-   @Override
+  /**
+    * Select the kth element in the range of an array
+    * @param S The array
+    * @param freq The frequency of elements in the array, if null freq(element) = 1
+    * @param start The first element in the range
+    * @param end The last element in the range
+    * @param k
+    * @return The index of the kth element
+    */
+  @Override
    public int select(int[] S, int[] freq, int start, int end, int k) {
       // Non-destructive selection
       int[] copyS = Arrays.copyOf(S, S.length);
@@ -194,6 +277,15 @@ public class MedianOfMedians implements SelectionAlgorithm {
       return index[select(copyS, freq, index, start, end, k)];
    }
 
+   /**
+    * Select the kth element in the range of an array
+    * @param S The array
+    * @param freq The frequency of elements in the array, if null freq(element) = 1
+    * @param start The first element in the range
+    * @param end The last element in the range
+    * @param k
+    * @return The index of the kth element
+    */
    protected int select(int[] S, int[] freq, int[] index, int start, int end, int k) {
 
       if (end == (start + 1)) {
@@ -217,6 +309,15 @@ public class MedianOfMedians implements SelectionAlgorithm {
       }
    }
 
+   /**
+    * Select the kth element in the range of an array
+    * @param S The array
+    * @param freq The frequency of elements in the array, if null freq(element) = 1
+    * @param start The first element in the range
+    * @param end The last element in the range
+    * @param k
+    * @return The index of the kth element
+    */
    @Override
    public <T> int select(T[] S, int[] freq, int start, int end, int k, Comparator<T> comparator) {
       // Non-destructive selection
@@ -229,6 +330,16 @@ public class MedianOfMedians implements SelectionAlgorithm {
       return index[select(copyS, freq, index, start, end, k, comparator)];
    }
 
+   /**
+    * Select the kth element in the range of an array
+    * @param S The array
+    * @param freq The frequency of elements in the array, if null freq(element) = 1
+    * @param index An array holding the original indices (1 to (size - 1)) which is rearranged with the partitioned data
+    * @param start The first element in the range
+    * @param end The last element in the range
+    * @param k
+    * @return The index of the kth element
+    */
    protected <T> int select(T[] S, int[] freq, int[] index, int start, int end, int k, Comparator<T> comparator) {
 
       if (end == (start + 1)) {
@@ -252,6 +363,16 @@ public class MedianOfMedians implements SelectionAlgorithm {
       }
    }
 
+   /**
+    * Partition a range according to the median element in the range
+    * @param S The array
+    * @param freq The frequency of elements in the array, if null freq(element) = 1
+    * @param indices An array holding the original indices (1 to (size - 1)) which 
+    *                is rearranged with the partitioned data* @param low
+    * @param low The first element in the range
+    * @param high The last element in the range
+    * @return The index of the kth element
+    */
    protected int partitionByMedian(char[] S, int[] freq, int[] indices, int low, int high) {
       final int arraysize = high - low;
       char[] subList = new char[(arraysize + 4) / 5];
@@ -288,6 +409,16 @@ public class MedianOfMedians implements SelectionAlgorithm {
       return indexPairedPartitioner.partition(S, low, high, medianOfMedians);
    }
 
+   /**
+    * Partition a range according to the median element in the range
+    * @param S The array
+    * @param freq The frequency of elements in the array, if null freq(element) = 1
+    * @param indices An array holding the original indices (1 to (size - 1)) which 
+    *                is rearranged with the partitioned data* @param low
+    * @param low The first element in the range
+    * @param high The last element in the range
+    * @return The index of the kth element
+    */
    protected int partitionByMedian(short[] S, int[] freq, int[] indices, int low, int high) {
       final int arraysize = high - low;
       short[] subList = new short[(arraysize + 4) / 5];
@@ -324,6 +455,16 @@ public class MedianOfMedians implements SelectionAlgorithm {
       return indexPairedPartitioner.partition(S, low, high, medianOfMedians);
    }
 
+   /**
+    * Partition a range according to the median element in the range
+    * @param S The array
+    * @param freq The frequency of elements in the array, if null freq(element) = 1
+    * @param indices An array holding the original indices (1 to (size - 1)) which 
+    *                is rearranged with the partitioned data* @param low
+    * @param low The first element in the range
+    * @param high The last element in the range
+    * @return The index of the kth element
+    */
    protected int partitionByMedian(float[] S, int[] freq, int[] indices, int low, int high) {
       final int arraysize = high - low;
       float[] subList = new float[(arraysize + 4) / 5];
@@ -360,6 +501,16 @@ public class MedianOfMedians implements SelectionAlgorithm {
       return indexPairedPartitioner.partition(S, low, high, medianOfMedians);
    }
 
+   /**
+    * Partition a range according to the median element in the range
+    * @param S The array
+    * @param freq The frequency of elements in the array, if null freq(element) = 1
+    * @param indices An array holding the original indices (1 to (size - 1)) which 
+    *                is rearranged with the partitioned data* @param low
+    * @param low The first element in the range
+    * @param high The last element in the range
+    * @return The index of the kth element
+    */
    protected int partitionByMedian(double[] S, int[] freq, int[] indices, int low, int high) {
       final int arraysize = high - low;
       double[] subList = new double[(arraysize + 4) / 5];
@@ -396,6 +547,16 @@ public class MedianOfMedians implements SelectionAlgorithm {
       return indexPairedPartitioner.partition(S, low, high, medianOfMedians);
    }
 
+   /**
+    * Partition a range according to the median element in the range
+    * @param S The array
+    * @param freq The frequency of elements in the array, if null freq(element) = 1
+    * @param indices An array holding the original indices (1 to (size - 1)) which 
+    *                is rearranged with the partitioned data* @param low
+    * @param low The first element in the range
+    * @param high The last element in the range
+    * @return The index of the kth element
+    */
    protected int partitionByMedian(int[] S, int[] freq, int[] indices, int low, int high) {
       final int arraysize = high - low;
       int[] subList = new int[(arraysize + 4) / 5];
@@ -432,6 +593,16 @@ public class MedianOfMedians implements SelectionAlgorithm {
       return indexPairedPartitioner.partition(S, low, high, medianOfMedians);
    }
 
+   /**
+    * Partition a range according to the median element in the range
+    * @param S The array
+    * @param freq The frequency of elements in the array, if null freq(element) = 1
+    * @param indices An array holding the original indices (1 to (size - 1)) which 
+    *                is rearranged with the partitioned data* @param low
+    * @param low The first element in the range
+    * @param high The last element in the range
+    * @return The index of the kth element
+    */
    protected <T> int partitionByMedian(T[] S, int[] freq, int[] indices, int low, int high, Comparator<T> comparator) {
       final int arraysize = high - low;
       T[] subList = (T[]) Array.newInstance(S[0].getClass(), (arraysize + 4) / 5);
@@ -467,7 +638,7 @@ public class MedianOfMedians implements SelectionAlgorithm {
       return indexPairedPartitioner.partition(S, low, high, medianOfMedians, comparator);
    }
 
-   protected int medianPosition(int[] freq, int first, int last) {
+   private int medianPosition(int[] freq, int first, int last) {
       int freqSum = accumulate(freq, first, last);
       int pos = 0;
       int mid = freqSum >> 1;
@@ -478,7 +649,7 @@ public class MedianOfMedians implements SelectionAlgorithm {
       return i - 1;
    }
 
-   protected int accumulate(int[] freq, int first, int last) {
+   private int accumulate(int[] freq, int first, int last) {
       int freqSum = 0;
       for (int i = first; i < last; ++i) {
          freqSum += freq[i];
@@ -486,7 +657,7 @@ public class MedianOfMedians implements SelectionAlgorithm {
       return freqSum;
    }
    
-   protected int medianPosition(int[] freq, int[] indices, int first, int last) {
+   private int medianPosition(int[] freq, int[] indices, int first, int last) {
       int freqSum = accumulate(freq, indices, first, last);
       int pos = 0;
       int mid = freqSum >> 1;
@@ -497,7 +668,7 @@ public class MedianOfMedians implements SelectionAlgorithm {
       return i - 1;
    }
 
-   protected int accumulate(int[] freq, int[] indices, int first, int last) {
+   private int accumulate(int[] freq, int[] indices, int first, int last) {
       int freqSum = 0;
       for (int i = first; i < last; ++i) {
          freqSum += freq[indices[i]];

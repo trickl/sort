@@ -24,11 +24,12 @@ import com.trickl.math.Permutator;
 import com.trickl.math.StandardPermutator;
 import java.util.Comparator;
 
-/*
- * The output condition is that everything less than the pivot index is less
- * than the pivot. Everything right (including the pivot point) is equal or
- * greater than than pivot.
+/**
+ * A partitioner that divides the data set into two sets according to a pivot.
+ * A : a &lt; pivot
+ * B : b >= pivot
  * Note: values equal to the pivot are not guaranteed to be contiguous.
+ * @author tgee
  */
 public final class GreaterOrEqualPartitioner {
 
@@ -36,6 +37,14 @@ public final class GreaterOrEqualPartitioner {
 
    private Permutator permutator = new StandardPermutator();
 
+   /**
+    * Partition the range of an array
+    * @param S The array
+    * @param start The first element in the range to partition
+    * @param end The last element in the range to partition
+    * @param pivot The pivot value
+    * @return The position of the first element greater or equal to the pivot after partitioning
+    */
    public int partition(short[] S, int start, int end, short pivot) {
       int i = start;
       int j = end - 1;
@@ -58,6 +67,14 @@ public final class GreaterOrEqualPartitioner {
       return i;
    }
 
+   /**
+    * Partition the range of an array
+    * @param S The array
+    * @param start The first element in the range to partition
+    * @param end The last element in the range to partition
+    * @param pivot The pivot value
+    * @return The position of the first element greater or equal to the pivot after partitioning
+    */
    public int partition(char[] S, int start, int end, char pivot) {
       int i = start;
       int j = end - 1;
@@ -80,6 +97,14 @@ public final class GreaterOrEqualPartitioner {
       return i;
    }
 
+   /**
+    * Partition the range of an array
+    * @param S The array
+    * @param start The first element in the range to partition
+    * @param end The last element in the range to partition
+    * @param pivot The pivot value
+    * @return The position of the first element greater or equal to the pivot after partitioning
+    */
    public int partition(double[] S, int start, int end, double pivot) {
       int i = start;
       int j = end - 1;
@@ -102,6 +127,14 @@ public final class GreaterOrEqualPartitioner {
       return i;
    }
 
+   /**
+    * Partition the range of an array
+    * @param S The array
+    * @param start The first element in the range to partition
+    * @param end The last element in the range to partition
+    * @param pivot The pivot value
+    * @return The position of the first element greater or equal to the pivot after partitioning
+    */
    public int partition(float[] S, int start, int end, float pivot) {
       int i = start;
       int j = end - 1;
@@ -124,6 +157,14 @@ public final class GreaterOrEqualPartitioner {
       return i;
    }
 
+   /**
+    * Partition the range of an array
+    * @param S The array
+    * @param start The first element in the range to partition
+    * @param end The last element in the range to partition
+    * @param pivot The pivot value
+    * @return The position of the first element greater or equal to the pivot after partitioning
+    */
    public int partition(int[] S, int start, int end, int pivot) {
       int i = start;
       int j = end - 1;
@@ -146,10 +187,29 @@ public final class GreaterOrEqualPartitioner {
       return i;
    }
 
+   /**
+    * Partition the range of an array
+    * @param <T> The data type of the array
+    * @param S The array
+    * @param start The first element in the range to partition
+    * @param end The last element in the range to partition
+    * @param pivot The pivot value
+    * @return The position of the first element greater or equal to the pivot after partitioning
+    */
    public <T> int partition(T[] S, int start, int end, T pivot) {
       return partition(S, start, end, pivot, null);
    }
 
+   /**
+    * Partition the range of an array
+    * @param <T> The data type of the array
+    * @param S The array
+    * @param start The first element in the range to partition
+    * @param end The last element in the range to partition
+    * @param pivot The pivot value
+    * @param comparator The comparator to use during partitioning
+    * @return The position of the first element greater or equal to the pivot after partitioning
+    */
    public <T> int partition(T[] S, int start, int end, T pivot, Comparator<T> comparator) {
       if (comparator == null) {
          comparator = naturalOrderingComparator;
@@ -176,10 +236,18 @@ public final class GreaterOrEqualPartitioner {
       return i;
    }
 
+   /**
+    * Get the permutator used by the partitioner
+    * @return The permutator
+    */
    public Permutator getPermutator() {
       return permutator;
    }
 
+   /**
+    * Set the permutator used by the partitioner
+    * @param permutator The permutator to use
+    */
    public void setPermutator(Permutator permutator) {
       this.permutator = permutator;
    }

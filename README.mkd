@@ -4,9 +4,9 @@ This is a Java library that provides some specialized sorting and selection algo
 
 Downloads
 =========
-The library can be downloaded as a binary or source package from [https://github.com/gemstonetiger/trickl-sort/downloads](https://github.com/gemstonetiger/trickl-sort/downloads "Distribution download page").
+The library can be downloaded as a binary or source package from [https://github.com/trickl/trickl-sort/downloads](https://github.com/trickl/trickl-sort/downloads "Distribution download page").
 
-The source can be also retrieved straight from the Git repository: `git clone git@github.com:gemstonetiger/trickl-sort.git`.
+The source can be also retrieved straight from the Git repository: `git clone git@github.com:trickl/trickl-sort.git`.
 
 Features
 ========

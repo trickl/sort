@@ -47,7 +47,7 @@ public class FiveElementSortTest {
       char[] inputArray = new char[]{1, 2, 3, 4, 5};
       for (int permutation = 0; permutation < totalPermutations; ++permutation) {
          for (int i = 0; i < permutation; ++i) {
-            Permutations.permutation(inputArray, new StandardPermutator());
+            Permutations.lexiographicPermute(inputArray, new StandardPermutator());
          }
          sorter.sort(inputArray, 0, inputArray.length);
          Assert.assertArrayEquals(inputArray, new char[]{1, 2, 3, 4, 5});
@@ -61,7 +61,7 @@ public class FiveElementSortTest {
       short[] inputArray = new short[]{1, 2, 3, 4, 5};
       for (int permutation = 0; permutation < totalPermutations; ++permutation) {
          for (int i = 0; i < permutation; ++i) {
-            Permutations.permutation(inputArray, new StandardPermutator());
+            Permutations.lexiographicPermute(inputArray, new StandardPermutator());
          }
          sorter.sort(inputArray, 0, inputArray.length);
          Assert.assertArrayEquals(inputArray, new short[]{1, 2, 3, 4, 5});
@@ -75,7 +75,7 @@ public class FiveElementSortTest {
       float[] inputArray = new float[]{1, 2, 3, 4, 5};
       for (int permutation = 0; permutation < totalPermutations; ++permutation) {
          for (int i = 0; i < permutation; ++i) {
-            Permutations.permutation(inputArray, new StandardPermutator());
+            Permutations.lexiographicPermute(inputArray, new StandardPermutator());
          }
          sorter.sort(inputArray, 0, inputArray.length);
          Assert.assertArrayEquals(inputArray, new float[]{1, 2, 3, 4, 5}, tolerance);
@@ -89,7 +89,7 @@ public class FiveElementSortTest {
       double[] inputArray = new double[]{1, 2, 3, 4, 5};
       for (int permutation = 0; permutation < totalPermutations; ++permutation) {
          for (int i = 0; i < permutation; ++i) {
-            Permutations.permutation(inputArray, new StandardPermutator());
+            Permutations.lexiographicPermute(inputArray, new StandardPermutator());
          }
          sorter.sort(inputArray, 0, inputArray.length);
          Assert.assertArrayEquals(inputArray, new double[]{1, 2, 3, 4, 5}, tolerance);
@@ -103,7 +103,7 @@ public class FiveElementSortTest {
       int[] inputArray = new int[]{1, 2, 3, 4, 5};
       for (int permutation = 0; permutation < totalPermutations; ++permutation) {
          for (int i = 0; i < permutation; ++i) {
-            Permutations.permutation(inputArray, new StandardPermutator());
+            Permutations.lexiographicPermute(inputArray, new StandardPermutator());
          }
          sorter.sort(inputArray, 0, inputArray.length);
          Assert.assertArrayEquals(inputArray, new int[]{1, 2, 3, 4, 5});
@@ -117,7 +117,7 @@ public class FiveElementSortTest {
       Integer[] inputArray = new Integer[]{1, 2, 3, 4, 5};
       for (int permutation = 0; permutation < totalPermutations; ++permutation) {
          for (int i = 0; i < permutation; ++i) {
-            Permutations.permutation(inputArray, new StandardPermutator());
+            Permutations.lexiographicPermute(inputArray, new StandardPermutator());
          }
          sorter.sort(inputArray,  0, inputArray.length, null);
          Assert.assertArrayEquals(inputArray, new Integer[]{1, 2, 3, 4, 5});
@@ -131,7 +131,7 @@ public class FiveElementSortTest {
       Integer[] inputArray = new Integer[]{1, 2, 3, 4, 5};
       for (int permutation = 0; permutation < totalPermutations; ++permutation) {
          for (int i = 0; i < permutation; ++i) {
-            Permutations.permutation(inputArray, new StandardPermutator());
+            Permutations.lexiographicPermute(inputArray, new StandardPermutator());
          }
          sorter.sort(inputArray, 0, inputArray.length, Collections.reverseOrder());
          Assert.assertArrayEquals(inputArray, new Integer[]{5, 4, 3, 2, 1});
