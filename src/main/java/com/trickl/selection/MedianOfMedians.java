@@ -20,8 +20,10 @@
  */
 package com.trickl.selection;
 
-import com.trickl.math.PairedPermutator;
+import com.trickl.math.ChainPermutator;
+import com.trickl.math.IntArrayPermutator;
 import com.trickl.math.Permutator;
+import com.trickl.math.StandardPermutator;
 import com.trickl.sort.FiveElementSort;
 import com.trickl.sort.QuickSort;
 import com.trickl.sort.ThreeWayPartitioner;
@@ -677,9 +679,9 @@ public class MedianOfMedians implements SelectionAlgorithm {
    }
 
    private void pairIndex(int[] index) {
-      Permutator pairedPermutator = new PairedPermutator(index);
-      fiveElementIndexPairedSorter.setPermutator(pairedPermutator);
-      indexPairedSorter.setPermutator(pairedPermutator);
-      indexPairedPartitioner.setPermutator(pairedPermutator);
+      Permutator chainPermutator = new ChainPermutator(new IntArrayPermutator(index), new StandardPermutator());
+      fiveElementIndexPairedSorter.setPermutator(chainPermutator);
+      indexPairedSorter.setPermutator(chainPermutator);
+      indexPairedPartitioner.setPermutator(chainPermutator);
    }
 }
