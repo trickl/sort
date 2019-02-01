@@ -1,23 +1,3 @@
-/*
- * This file is part of the Trickl Open Source Libraries.
- *
- * Trickl Open Source Libraries - http://open.trickl.com/
- *
- * Copyright (C) 2011 Tim Gee.
- *
- * Trickl Open Source Libraries are free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Trickl Open Source Libraries are distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this project.  If not, see <http://www.gnu.org/licenses/>.
- */
 package com.trickl.math;
 
 /**
@@ -28,7 +8,8 @@ package com.trickl.math;
 public interface Permutator {
 
   /**
-   * Perform a three cycle permutation [ 1, 2, 3 ] -> [ 2, 3, 1 ]
+   * Perform a three cycle permutation.
+   * [ 1, 2, 3 ] -> [ 2, 3, 1 ]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -39,7 +20,8 @@ public interface Permutator {
   short[] cycle(short[] S, int first, int second, int third);
 
   /**
-   * Perform a three cycle permutation [ 1, 2, 3 ] -> [ 2, 3, 1 ]
+   * Perform a three cycle permutation.
+   * [ 1, 2, 3 ] -> [ 2, 3, 1 ]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -50,7 +32,8 @@ public interface Permutator {
   char[] cycle(char[] S, int first, int second, int third);
 
   /**
-   * Perform a three cycle permutation [ 1, 2, 3 ] -> [ 2, 3, 1 ]
+   * Perform a three cycle permutation.
+   * [ 1, 2, 3 ] -> [ 2, 3, 1 ]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -61,7 +44,8 @@ public interface Permutator {
   float[] cycle(float[] S, int first, int second, int third);
 
   /**
-   * Perform a three cycle permutation [ 1, 2, 3 ] -> [ 2, 3, 1 ]
+   * Perform a three cycle permutation.
+   * [ 1, 2, 3 ] -> [ 2, 3, 1 ]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -72,7 +56,8 @@ public interface Permutator {
   double[] cycle(double[] S, int first, int second, int third);
 
   /**
-   * Perform a three cycle permutation [ 1, 2, 3 ] -> [ 2, 3, 1 ]
+   * Perform a three cycle permutation.
+   * [ 1, 2, 3 ] -> [ 2, 3, 1 ]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -83,7 +68,8 @@ public interface Permutator {
   int[] cycle(int[] S, int first, int second, int third);
 
   /**
-   * Perform a three cycle permutation [ 1, 2, 3 ] -> [ 2, 3, 1 ]
+   * Perform a three cycle permutation.
+   * [ 1, 2, 3 ] -> [ 2, 3, 1 ]
    *
    * @param <T> The type of the array
    * @param S The array
@@ -95,7 +81,8 @@ public interface Permutator {
   <T> T[] cycle(T[] S, int first, int second, int third);
 
   /**
-   * Perform a four cycle permutation [ 1, 2, 3, 4] -> [ 2, 3, 4, 1]
+   * Perform a four cycle permutation.
+   * [ 1, 2, 3, 4] -> [ 2, 3, 4, 1]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -107,7 +94,8 @@ public interface Permutator {
   short[] cycle(short[] S, int first, int second, int third, int fourth);
 
   /**
-   * Perform a four cycle permutation [ 1, 2, 3, 4] -> [ 2, 3, 4, 1]
+   * Perform a four cycle permutation.
+   * [ 1, 2, 3, 4] -> [ 2, 3, 4, 1]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -247,124 +235,124 @@ public interface Permutator {
   <T> T[] cycle(T[] S, int first, int second, int third, int fourth, int fifth);
 
   /**
-   * Reverses the elements in the array
+   * Reverses the elements in the array.
    *
-   * @param S The array
+   * @param arr The array
    * @param start The first element in the range to be reversed
    * @param end The last element in the range to be reversed
    * @return The array
    */
-  short[] reverse(short[] S, int start, int end);
+  short[] reverse(short[] arr, int start, int end);
 
   /**
-   * Reverses the elements in the array
+   * Reverses the elements in the array.
    *
-   * @param S The array
+   * @param arr The array
    * @param start The first element in the range to be reversed
    * @param end The last element in the range to be reversed
    * @return The array
    */
-  char[] reverse(char[] S, int start, int end);
+  char[] reverse(char[] arr, int start, int end);
 
   /**
-   * Reverses the elements in the array
+   * Reverses the elements in the array.
    *
-   * @param S The array
+   * @param arr The array
    * @param start The first element in the range to be reversed
    * @param end The last element in the range to be reversed
    * @return The array
    */
-  double[] reverse(double[] S, int start, int end);
+  double[] reverse(double[] arr, int start, int end);
 
   /**
-   * Reverses the elements in the array
+   * Reverses the elements in the array.
    *
-   * @param S The array
+   * @param arr The array
    * @param start The first element in the range to be reversed
    * @param end The last element in the range to be reversed
    * @return The array
    */
-  float[] reverse(float[] S, int start, int end);
+  float[] reverse(float[] arr, int start, int end);
 
   /**
-   * Reverses the elements in the array
+   * Reverses the elements in the array.
    *
-   * @param S The array
+   * @param arr The array
    * @param start The first element in the range to be reversed
    * @param end The last element in the range to be reversed
    * @return The array
    */
-  int[] reverse(int[] S, int start, int end);
+  int[] reverse(int[] arr, int start, int end);
 
   /**
    * Reverses the elements in the array
    *
    * @param <T> The data type of the array
-   * @param S The array
+   * @param arr The array
    * @param start The first element in the range to be reversed
    * @param end The last element in the range to be reversed
    * @return The array
    */
-  <T> T[] reverse(T[] S, int start, int end);
+  <T> T[] reverse(T[] arr, int start, int end);
 
   /**
-   * Swaps the elements in the array
+   * Swaps the elements in the array.
    *
-   * @param S The array
+   * @param arr The array
    * @param first The index of the first element
    * @param second The index of the second element
    * @return The array
    */
-  short[] swap(short[] S, int first, int second);
+  short[] swap(short[] arr, int first, int second);
 
   /**
-   * Swaps the elements in the array
+   * Swaps the elements in the array.
    *
-   * @param S The array
+   * @param arr The array
    * @param first The index of the first element
    * @param second The index of the second element
    * @return The array
    */
-  char[] swap(char[] S, int first, int second);
+  char[] swap(char[] arr, int first, int second);
 
   /**
    * Swaps the elements in the array
    *
-   * @param S The array
+   * @param arr The array
    * @param first The index of the first element
    * @param second The index of the second element
    * @return The array
    */
-  double[] swap(double[] S, int first, int second);
+  double[] swap(double[] arr, int first, int second);
 
   /**
-   * Swaps the elements in the array
+   * Swaps the elements in the array.
    *
-   * @param S The array
+   * @param arr The array
    * @param first The index of the first element
    * @param second The index of the second element
    * @return The array
    */
-  float[] swap(float[] S, int first, int second);
+  float[] swap(float[] arr, int first, int second);
 
   /**
-   * Swaps the elements in the array
+   * Swaps the elements in the array.
    *
-   * @param S The array
+   * @param arr The array
    * @param first The index of the first element
    * @param second The index of the second element
    * @return The array
    */
-  int[] swap(int[] S, int first, int second);
+  int[] swap(int[] arr, int first, int second);
 
   /**
-   * Swaps the elements in the array
+   * Swaps the elements in the array.
    *
    * @param <T> The data type of the array
-   * @param S The array
+   * @param arr The array
    * @param first The index of the first element
    * @param second The index of the second element
    * @return The array
    */
-  <T> T[] swap(T[] S, int first, int second);
+  <T> T[] swap(T[] arr, int first, int second);
 }

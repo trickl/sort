@@ -68,9 +68,11 @@
               <failsOnError>true</failsOnError>
               <violationSeverity>warning</violationSeverity>
             </configuration>
+            <!--
             <goals>
               <goal>check</goal>
             </goals>
+            -->
           </execution>
         </executions>
       </plugin>
