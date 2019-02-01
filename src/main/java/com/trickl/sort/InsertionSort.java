@@ -26,136 +26,147 @@ import java.util.Comparator;
 
 /**
  * http://en.wikipedia.org/wiki/Insertion_sort
+ *
  * @author tgee
  */
 public class InsertionSort {
 
-   private static final NaturalOrderingComparator naturalOrderingComparator = new NaturalOrderingComparator();
-   private Permutator permutator = new StandardPermutator();
+  private static final NaturalOrderingComparator naturalOrderingComparator =
+      new NaturalOrderingComparator();
+  private Permutator permutator = new StandardPermutator();
 
-   /**
-    * Sort a range in the array
-    * @param S The array
-    * @param start The index of the first element in the range to sort
-    * @param end The index of the last element in the range to sort
-    * @return The array
-    */
-   public char[] sort(char[] S, int start, int end) {
-      for (int i = start + 1; i < end; i++) {
-         for (int j = i; j > start && S[j - 1] > S[j]; j--) {
-            permutator.swap(S, j, j - 1);
-         }
+  /**
+   * Sort a range in the array
+   *
+   * @param S The array
+   * @param start The index of the first element in the range to sort
+   * @param end The index of the last element in the range to sort
+   * @return The array
+   */
+  public char[] sort(char[] S, int start, int end) {
+    for (int i = start + 1; i < end; i++) {
+      for (int j = i; j > start && S[j - 1] > S[j]; j--) {
+        permutator.swap(S, j, j - 1);
       }
-      return S;
-   }
+    }
+    return S;
+  }
 
-   /**
-    * Sort a range in the array
-    * @param S The array
-    * @param start The index of the first element in the range to sort
-    * @param end The index of the last element in the range to sort
-    * @return The array
-    */
-   public short[] sort(short[] S, int start, int end) {
-      for (int i = start + 1; i < end; i++) {
-         for (int j = i; j > start && S[j - 1] > S[j]; j--) {
-            permutator.swap(S, j, j - 1);
-         }
+  /**
+   * Sort a range in the array
+   *
+   * @param S The array
+   * @param start The index of the first element in the range to sort
+   * @param end The index of the last element in the range to sort
+   * @return The array
+   */
+  public short[] sort(short[] S, int start, int end) {
+    for (int i = start + 1; i < end; i++) {
+      for (int j = i; j > start && S[j - 1] > S[j]; j--) {
+        permutator.swap(S, j, j - 1);
       }
-      return S;
-   }
+    }
+    return S;
+  }
 
-   /**
-    * Sort a range in the array
-    * @param S The array
-    * @param start The index of the first element in the range to sort
-    * @param end The index of the last element in the range to sort
-    * @return The array
-    */
-   public double[] sort(double[] S, int start, int end) {
-      for (int i = start + 1; i < end; i++) {
-         for (int j = i; j > start && S[j - 1] > S[j]; j--) {
-            permutator.swap(S, j, j - 1);
-         }
+  /**
+   * Sort a range in the array
+   *
+   * @param S The array
+   * @param start The index of the first element in the range to sort
+   * @param end The index of the last element in the range to sort
+   * @return The array
+   */
+  public double[] sort(double[] S, int start, int end) {
+    for (int i = start + 1; i < end; i++) {
+      for (int j = i; j > start && S[j - 1] > S[j]; j--) {
+        permutator.swap(S, j, j - 1);
       }
-      return S;
-   }
+    }
+    return S;
+  }
 
-   /**
-    * Sort a range in the array
-    * @param S The array
-    * @param start The index of the first element in the range to sort
-    * @param end The index of the last element in the range to sort
-    * @return The array
-    */
-   public float[] sort(float[] S, int start, int end) {
-      for (int i = start + 1; i < end; i++) {
-         for (int j = i; j > start && S[j - 1] > S[j]; j--) {
-            permutator.swap(S, j, j - 1);
-         }
+  /**
+   * Sort a range in the array
+   *
+   * @param S The array
+   * @param start The index of the first element in the range to sort
+   * @param end The index of the last element in the range to sort
+   * @return The array
+   */
+  public float[] sort(float[] S, int start, int end) {
+    for (int i = start + 1; i < end; i++) {
+      for (int j = i; j > start && S[j - 1] > S[j]; j--) {
+        permutator.swap(S, j, j - 1);
       }
-      return S;
-   }
+    }
+    return S;
+  }
 
-   /**
-    * Sort a range in the array
-    * @param S The array
-    * @param start The index of the first element in the range to sort
-    * @param end The index of the last element in the range to sort
-    * @return The array
-    */
-   public int[] sort(int[] S, int start, int end) {
-      for (int i = start + 1; i < end; i++) {
-         for (int j = i; j > start && S[j - 1] > S[j]; j--) {
-            permutator.swap(S, j, j - 1);
-         }
+  /**
+   * Sort a range in the array
+   *
+   * @param S The array
+   * @param start The index of the first element in the range to sort
+   * @param end The index of the last element in the range to sort
+   * @return The array
+   */
+  public int[] sort(int[] S, int start, int end) {
+    for (int i = start + 1; i < end; i++) {
+      for (int j = i; j > start && S[j - 1] > S[j]; j--) {
+        permutator.swap(S, j, j - 1);
       }
-      return S;
-   }
+    }
+    return S;
+  }
 
-   /**
-    * Sort a range in the array
-    * @param <T> The data type of the array
-    * @param S The array
-    * @param start The index of the first element in the range to sort
-    * @param end The index of the last element in the range to sort
-    * @return The array
-    */
-   public <T> T[] sort(T[] S, int start, int end) {
-      return sort(S, start, end, null);
-   }
-   
-   /**
-    * Sort a range in the array
-    * @param <T> The data type of the array
-    * @param S The array
-    * @param start The index of the first element in the range to sort
-    * @param end The index of the last element in the range to sort
-    * @return The array
-    */
-   public <T> T[] sort(T[] S, int start, int end, Comparator<T> comparator) {
-      if (comparator == null) comparator = naturalOrderingComparator;
-      for (int i = start + 1; i < end; i++) {
-         for (int j = i; j > start && comparator.compare(S[j - 1], S[j]) > 0; j--) {
-            permutator.swap(S, j, j - 1);
-         }
+  /**
+   * Sort a range in the array
+   *
+   * @param <T> The data type of the array
+   * @param S The array
+   * @param start The index of the first element in the range to sort
+   * @param end The index of the last element in the range to sort
+   * @return The array
+   */
+  public <T> T[] sort(T[] S, int start, int end) {
+    return sort(S, start, end, null);
+  }
+
+  /**
+   * Sort a range in the array
+   *
+   * @param <T> The data type of the array
+   * @param S The array
+   * @param start The index of the first element in the range to sort
+   * @param end The index of the last element in the range to sort
+   * @return The array
+   */
+  public <T> T[] sort(T[] S, int start, int end, Comparator<T> comparator) {
+    if (comparator == null) comparator = naturalOrderingComparator;
+    for (int i = start + 1; i < end; i++) {
+      for (int j = i; j > start && comparator.compare(S[j - 1], S[j]) > 0; j--) {
+        permutator.swap(S, j, j - 1);
       }
-      return S;
-   }
+    }
+    return S;
+  }
 
-   /**
-    * Get the permutator used by the partitioner
-    * @return The permutator
-    */
-   public Permutator getPermutator() {
-      return permutator;
-   }
+  /**
+   * Get the permutator used by the partitioner
+   *
+   * @return The permutator
+   */
+  public Permutator getPermutator() {
+    return permutator;
+  }
 
-   /**
-    * Set the permutator used by the partitioner
-    * @param permutator The permutator to use
-    */
-   public void setPermutator(Permutator permutator) {
-      this.permutator = permutator;
-   }
+  /**
+   * Set the permutator used by the partitioner
+   *
+   * @param permutator The permutator to use
+   */
+  public void setPermutator(Permutator permutator) {
+    this.permutator = permutator;
+  }
 }

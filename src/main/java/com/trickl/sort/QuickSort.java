@@ -26,269 +26,278 @@ import java.util.Comparator;
 
 /**
  * http://en.wikipedia.org/wiki/Quicksort
+ *
  * @author tgee
  */
 public final class QuickSort implements Sorter {
 
-   private static final NaturalOrderingComparator naturalOrderingComparator = new NaturalOrderingComparator();
-   private ThreeWayPartitioner partitioner = new ThreeWayPartitioner();
-   private InsertionSort insertionSort = new InsertionSort();
-   private Permutator permutator = new StandardPermutator();
+  private static final NaturalOrderingComparator naturalOrderingComparator =
+      new NaturalOrderingComparator();
+  private ThreeWayPartitioner partitioner = new ThreeWayPartitioner();
+  private InsertionSort insertionSort = new InsertionSort();
+  private Permutator permutator = new StandardPermutator();
 
-   /**
-    * Sort a range in the array
-    * @param S The array
-    * @param start The index of the first element in the range to sort
-    * @param end The index of the last element in the range to sort
-    * @return The array
-    */
-   @Override
-   public char[] sort(char[] S, int start, int end) {
-      if (end > start) {
-         if (end - start < 10) {
-            return insertionSort.sort(S, start, end);
-         }
-
-         int pivotIndex = medianOf3(S, start, (end + start) >> 1, end - 1);
-         char pivot = S[pivotIndex];
-         int pivotPoint = partitioner.partition(S, start, end, pivot);
-
-         // Recursively sort each partition
-         sort(S, start, pivotPoint);
-
-         while (pivotPoint < end && S[pivotPoint] == pivot) {
-            ++pivotPoint;
-         }
-
-         sort(S, pivotPoint, end);
+  /**
+   * Sort a range in the array
+   *
+   * @param S The array
+   * @param start The index of the first element in the range to sort
+   * @param end The index of the last element in the range to sort
+   * @return The array
+   */
+  @Override
+  public char[] sort(char[] S, int start, int end) {
+    if (end > start) {
+      if (end - start < 10) {
+        return insertionSort.sort(S, start, end);
       }
 
-      return S;
-   }
+      int pivotIndex = medianOf3(S, start, (end + start) >> 1, end - 1);
+      char pivot = S[pivotIndex];
+      int pivotPoint = partitioner.partition(S, start, end, pivot);
 
-   /**
-    * Sort a range in the array
-    * @param S The array
-    * @param start The index of the first element in the range to sort
-    * @param end The index of the last element in the range to sort
-    * @return The array
-    */
-   @Override
-   public short[] sort(short[] S, int start, int end) {
-      if (end > start) {
-         if (end - start < 10) {
-            return insertionSort.sort(S, start, end);
-         }
+      // Recursively sort each partition
+      sort(S, start, pivotPoint);
 
-         int pivotIndex = medianOf3(S, start, (end + start) >> 1, end - 1);
-         short pivot = S[pivotIndex];
-         int pivotPoint = partitioner.partition(S, start, end, pivot);
-
-         // Recursively sort each partition
-         sort(S, start, pivotPoint);
-
-         while (pivotPoint < end && S[pivotPoint] == pivot) {
-            ++pivotPoint;
-         }
-
-         sort(S, pivotPoint, end);
+      while (pivotPoint < end && S[pivotPoint] == pivot) {
+        ++pivotPoint;
       }
 
-      return S;
-   }
+      sort(S, pivotPoint, end);
+    }
 
-   /**
-    * Sort a range in the array
-    * @param S The array
-    * @param start The index of the first element in the range to sort
-    * @param end The index of the last element in the range to sort
-    * @return The array
-    */
-   @Override
-   public double[] sort(double[] S, int start, int end) {
-      if (end > start) {
-         if (end - start < 10) {
-            return insertionSort.sort(S, start, end);
-         }
+    return S;
+  }
 
-         int pivotIndex = medianOf3(S, start, (end + start) >> 1, end - 1);
-         double pivot = S[pivotIndex];
-         int pivotPoint = partitioner.partition(S, start, end, pivot);
-
-         // Recursively sort each partition
-         sort(S, start, pivotPoint);
-
-         while (pivotPoint < end && S[pivotPoint] == pivot) {
-            ++pivotPoint;
-         }
-
-         sort(S, pivotPoint, end);
+  /**
+   * Sort a range in the array
+   *
+   * @param S The array
+   * @param start The index of the first element in the range to sort
+   * @param end The index of the last element in the range to sort
+   * @return The array
+   */
+  @Override
+  public short[] sort(short[] S, int start, int end) {
+    if (end > start) {
+      if (end - start < 10) {
+        return insertionSort.sort(S, start, end);
       }
 
-      return S;
-   }
+      int pivotIndex = medianOf3(S, start, (end + start) >> 1, end - 1);
+      short pivot = S[pivotIndex];
+      int pivotPoint = partitioner.partition(S, start, end, pivot);
 
-   /**
-    * Sort a range in the array
-    * @param S The array
-    * @param start The index of the first element in the range to sort
-    * @param end The index of the last element in the range to sort
-    * @return The array
-    */
-   @Override
-   public float[] sort(float[] S, int start, int end) {
-      if (end > start) {
-         if (end - start < 10) {
-            return insertionSort.sort(S, start, end);
-         }
+      // Recursively sort each partition
+      sort(S, start, pivotPoint);
 
-         int pivotIndex = medianOf3(S, start, (end + start) >> 1, end - 1);
-         float pivot = S[pivotIndex];
-         int pivotPoint = partitioner.partition(S, start, end, pivot);
-
-         // Recursively sort each partition
-         sort(S, start, pivotPoint);
-
-         while (pivotPoint < end && S[pivotPoint] == pivot) {
-            ++pivotPoint;
-         }
-
-         sort(S, pivotPoint, end);
+      while (pivotPoint < end && S[pivotPoint] == pivot) {
+        ++pivotPoint;
       }
 
-      return S;
-   }
+      sort(S, pivotPoint, end);
+    }
 
-   /**
-    * Sort a range in the array
-    * @param S The array
-    * @param start The index of the first element in the range to sort
-    * @param end The index of the last element in the range to sort
-    * @return The array
-    */
-   @Override
-   public int[] sort(int[] S, int start, int end) {
-      if (end > start) {
-         if (end - start < 10) {
-            return insertionSort.sort(S, start, end);
-         }
+    return S;
+  }
 
-         int pivotIndex = medianOf3(S, start, (end + start) >> 1, end - 1);
-         int pivot = S[pivotIndex];
-         int pivotPoint = partitioner.partition(S, start, end, pivot);
-
-         // Recursively sort each partition
-         sort(S, start, pivotPoint);
-
-         while (pivotPoint < end && S[pivotPoint] == pivot) {
-            ++pivotPoint;
-         }
-
-         sort(S, pivotPoint, end);
+  /**
+   * Sort a range in the array
+   *
+   * @param S The array
+   * @param start The index of the first element in the range to sort
+   * @param end The index of the last element in the range to sort
+   * @return The array
+   */
+  @Override
+  public double[] sort(double[] S, int start, int end) {
+    if (end > start) {
+      if (end - start < 10) {
+        return insertionSort.sort(S, start, end);
       }
 
-      return S;
-   }
+      int pivotIndex = medianOf3(S, start, (end + start) >> 1, end - 1);
+      double pivot = S[pivotIndex];
+      int pivotPoint = partitioner.partition(S, start, end, pivot);
 
-   /**
-    * Sort a range in the array
-    * @param <T> The data type of the array
-    * @param S The array
-    * @param start The index of the first element in the range to sort
-    * @param end The index of the last element in the range to sort
-    * @return The array
-    */
-   @Override
-   public <T> T[] sort(T[] S, int start, int end, Comparator<T> comparator) {      
-      if (end > start) {
-         if (comparator == null) comparator = naturalOrderingComparator;
+      // Recursively sort each partition
+      sort(S, start, pivotPoint);
 
-         if (end - start < 10) {
-            return insertionSort.sort(S, start, end, comparator);
-         }
-
-         int pivotIndex = medianOf3(S, start, (end + start) >> 1, end - 1, comparator);
-         T pivot = S[pivotIndex];
-         int pivotPoint = partitioner.partition(S, start, end, pivot, comparator);
-
-         // Recursively sort each partition
-         sort(S, start, pivotPoint, comparator);
-
-         while (pivotPoint < end && comparator.compare(S[pivotPoint], pivot) == 0) {
-            ++pivotPoint;
-         }
-         
-         sort(S, pivotPoint, end, comparator);
+      while (pivotPoint < end && S[pivotPoint] == pivot) {
+        ++pivotPoint;
       }
 
-      return S;
-   }
+      sort(S, pivotPoint, end);
+    }
 
-   /**
-    * Sort a range in the array
-    * @param <T> The data type of the array
-    * @param S The array
-    * @param start The index of the first element in the range to sort
-    * @param end The index of the last element in the range to sort
-    * @return The array
-    */
-   public <T> T[] sort(T[] S, int start, int end) {
-      return sort(S, start, end, null);
-   }
-   
-   private int medianOf3(short[] S, int a, int b, int c) {
-      return (S[a] < S[b]
-              ? (S[b] < S[c] ? b : S[a] < S[c] ? c : a)
-              : (S[b] > S[c] ? b : S[a] > S[c] ? c : a));
-   }
-   
-   private int medianOf3(char[] S, int a, int b, int c) {
-      return (S[a] < S[b]
-              ? (S[b] < S[c] ? b : S[a] < S[c] ? c : a)
-              : (S[b] > S[c] ? b : S[a] > S[c] ? c : a));
-   }
-   
-   private int medianOf3(double[] S, int a, int b, int c) {
-      return (S[a] < S[b]
-              ? (S[b] < S[c] ? b : S[a] < S[c] ? c : a)
-              : (S[b] > S[c] ? b : S[a] > S[c] ? c : a));
-   }
+    return S;
+  }
 
-   private int medianOf3(float[] S, int a, int b, int c) {
-      return (S[a] < S[b]
-              ? (S[b] < S[c] ? b : S[a] < S[c] ? c : a)
-              : (S[b] > S[c] ? b : S[a] > S[c] ? c : a));
-   }
+  /**
+   * Sort a range in the array
+   *
+   * @param S The array
+   * @param start The index of the first element in the range to sort
+   * @param end The index of the last element in the range to sort
+   * @return The array
+   */
+  @Override
+  public float[] sort(float[] S, int start, int end) {
+    if (end > start) {
+      if (end - start < 10) {
+        return insertionSort.sort(S, start, end);
+      }
 
-   private int medianOf3(int[] S, int a, int b, int c) {
-      return (S[a] < S[b]
-              ? (S[b] < S[c] ? b : S[a] < S[c] ? c : a)
-              : (S[b] > S[c] ? b : S[a] > S[c] ? c : a));
-   }
+      int pivotIndex = medianOf3(S, start, (end + start) >> 1, end - 1);
+      float pivot = S[pivotIndex];
+      int pivotPoint = partitioner.partition(S, start, end, pivot);
 
-   private <T> int medianOf3(T[] S, int a, int b, int c, Comparator<T> comparator) {
-      return (comparator.compare(S[a], S[b]) < 0
-              ? (comparator.compare(S[b], S[c]) < 0 ? b
-              : comparator.compare(S[a], S[c]) < 0 ? c : a)
-              : (comparator.compare(S[b], S[c]) > 0 ? b
-              : comparator.compare(S[a], S[c]) > 0 ? c : a));
-   }
-   
-   /**
-    * Get the permutator used by the partitioner
-    * @return The permutator
-    */
-   public Permutator getPermutator() {
-      return permutator;
-   }
+      // Recursively sort each partition
+      sort(S, start, pivotPoint);
 
-   /**
-    * Set the permutator used by the partitioner
-    * @param permutator The permutator to use
-    */
-   public void setPermutator(Permutator permutator) {
-      this.permutator = permutator;
-      this.insertionSort.setPermutator(permutator);
-      this.partitioner.setPermutator(permutator);
-   }
+      while (pivotPoint < end && S[pivotPoint] == pivot) {
+        ++pivotPoint;
+      }
+
+      sort(S, pivotPoint, end);
+    }
+
+    return S;
+  }
+
+  /**
+   * Sort a range in the array
+   *
+   * @param S The array
+   * @param start The index of the first element in the range to sort
+   * @param end The index of the last element in the range to sort
+   * @return The array
+   */
+  @Override
+  public int[] sort(int[] S, int start, int end) {
+    if (end > start) {
+      if (end - start < 10) {
+        return insertionSort.sort(S, start, end);
+      }
+
+      int pivotIndex = medianOf3(S, start, (end + start) >> 1, end - 1);
+      int pivot = S[pivotIndex];
+      int pivotPoint = partitioner.partition(S, start, end, pivot);
+
+      // Recursively sort each partition
+      sort(S, start, pivotPoint);
+
+      while (pivotPoint < end && S[pivotPoint] == pivot) {
+        ++pivotPoint;
+      }
+
+      sort(S, pivotPoint, end);
+    }
+
+    return S;
+  }
+
+  /**
+   * Sort a range in the array
+   *
+   * @param <T> The data type of the array
+   * @param S The array
+   * @param start The index of the first element in the range to sort
+   * @param end The index of the last element in the range to sort
+   * @return The array
+   */
+  @Override
+  public <T> T[] sort(T[] S, int start, int end, Comparator<T> comparator) {
+    if (end > start) {
+      if (comparator == null) comparator = naturalOrderingComparator;
+
+      if (end - start < 10) {
+        return insertionSort.sort(S, start, end, comparator);
+      }
+
+      int pivotIndex = medianOf3(S, start, (end + start) >> 1, end - 1, comparator);
+      T pivot = S[pivotIndex];
+      int pivotPoint = partitioner.partition(S, start, end, pivot, comparator);
+
+      // Recursively sort each partition
+      sort(S, start, pivotPoint, comparator);
+
+      while (pivotPoint < end && comparator.compare(S[pivotPoint], pivot) == 0) {
+        ++pivotPoint;
+      }
+
+      sort(S, pivotPoint, end, comparator);
+    }
+
+    return S;
+  }
+
+  /**
+   * Sort a range in the array
+   *
+   * @param <T> The data type of the array
+   * @param S The array
+   * @param start The index of the first element in the range to sort
+   * @param end The index of the last element in the range to sort
+   * @return The array
+   */
+  public <T> T[] sort(T[] S, int start, int end) {
+    return sort(S, start, end, null);
+  }
+
+  private int medianOf3(short[] S, int a, int b, int c) {
+    return (S[a] < S[b]
+        ? (S[b] < S[c] ? b : S[a] < S[c] ? c : a)
+        : (S[b] > S[c] ? b : S[a] > S[c] ? c : a));
+  }
+
+  private int medianOf3(char[] S, int a, int b, int c) {
+    return (S[a] < S[b]
+        ? (S[b] < S[c] ? b : S[a] < S[c] ? c : a)
+        : (S[b] > S[c] ? b : S[a] > S[c] ? c : a));
+  }
+
+  private int medianOf3(double[] S, int a, int b, int c) {
+    return (S[a] < S[b]
+        ? (S[b] < S[c] ? b : S[a] < S[c] ? c : a)
+        : (S[b] > S[c] ? b : S[a] > S[c] ? c : a));
+  }
+
+  private int medianOf3(float[] S, int a, int b, int c) {
+    return (S[a] < S[b]
+        ? (S[b] < S[c] ? b : S[a] < S[c] ? c : a)
+        : (S[b] > S[c] ? b : S[a] > S[c] ? c : a));
+  }
+
+  private int medianOf3(int[] S, int a, int b, int c) {
+    return (S[a] < S[b]
+        ? (S[b] < S[c] ? b : S[a] < S[c] ? c : a)
+        : (S[b] > S[c] ? b : S[a] > S[c] ? c : a));
+  }
+
+  private <T> int medianOf3(T[] S, int a, int b, int c, Comparator<T> comparator) {
+    return (comparator.compare(S[a], S[b]) < 0
+        ? (comparator.compare(S[b], S[c]) < 0 ? b : comparator.compare(S[a], S[c]) < 0 ? c : a)
+        : (comparator.compare(S[b], S[c]) > 0 ? b : comparator.compare(S[a], S[c]) > 0 ? c : a));
+  }
+
+  /**
+   * Get the permutator used by the partitioner
+   *
+   * @return The permutator
+   */
+  public Permutator getPermutator() {
+    return permutator;
+  }
+
+  /**
+   * Set the permutator used by the partitioner
+   *
+   * @param permutator The permutator to use
+   */
+  public void setPermutator(Permutator permutator) {
+    this.permutator = permutator;
+    this.insertionSort.setPermutator(permutator);
+    this.partitioner.setPermutator(permutator);
+  }
 }

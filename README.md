@@ -1,4 +1,4 @@
-# Trickl Language
+# Trickl Sort
 
 [![build_status](https://travis-ci.com/trickl/sort.svg?branch=master)](https://travis-ci.com/trickl/sort)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c50441e8e5e10b31803f/maintainability)](https://codeclimate.com/github/trickl/sort/maintainability)
