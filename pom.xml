@@ -34,6 +34,12 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.google.caliper</groupId>
+      <artifactId>caliper</artifactId>
+      <version>1.0-beta-2</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -139,6 +145,58 @@
           </plugin>
         </plugins>
       </build>
+    </profile>
+    <profile>
+        <id>benchmarks</id>
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>exec-maven-plugin</artifactId>
+                    <version>1.2.1</version>
+                    <executions>
+                        <execution>
+                            <id>benchmark-four-element-sort</id>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>java</goal>
+                            </goals>
+                            <configuration>
+                                <classpathScope>test</classpathScope>
+                                <mainClass>com.google.caliper.runner.CaliperMain</mainClass>
+                                <arguments>
+                                    <argument>com.trickl.sort.FourElementSortBenchmark$Char</argument>
+                                    <argument>--instrument</argument>
+                                    <argument>runtime</argument>
+                                    <argument>--config</argument>
+                                    <argument>src/test/resources/caliper/config.properties</argument>
+                                    <argument>-Cinstrument.allocation.options.trackAllocations=false</argument>
+                                </arguments>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>benchmark-five-element-sort</id>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>java</goal>
+                            </goals>
+                            <configuration>
+                                <classpathScope>test</classpathScope>
+                                <mainClass>com.google.caliper.runner.CaliperMain</mainClass>
+                                <arguments>
+                                    <argument>com.trickl.sort.FiveElementSortBenchmark$Char</argument>
+                                    <argument>--instrument</argument>
+                                    <argument>runtime</argument>
+                                    <argument>--config</argument>
+                                    <argument>src/test/resources/caliper/config.properties</argument>
+                                    <argument>-Cinstrument.allocation.options.trackAllocations=false</argument>
+                                </arguments>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </build>
     </profile>
   </profiles>
   <distributionManagement>

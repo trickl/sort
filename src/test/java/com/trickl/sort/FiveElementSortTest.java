@@ -20,10 +20,14 @@
  */
 package com.trickl.sort;
 
+import com.google.caliper.BeforeExperiment;
+import com.google.caliper.Benchmark;
 import com.trickl.math.Permutations;
 import com.trickl.math.StandardPermutator;
 import java.util.Collections;
 import org.junit.Assert;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 /** @author tgee */
@@ -32,8 +36,38 @@ public class FiveElementSortTest {
   private static final float tolerance = 1e-15f;
 
   private static final int totalPermutations = 120;
+  
+  private static char[][] permutations;
+  
+  Sorter sorter = new FiveElementSort(); 
 
   public FiveElementSortTest() {}
+  
+    @BeforeClass
+    public static void setUp() {      
+      permutations = new char[totalPermutations][5];
+      char[] inputArray = new char[] {1, 2, 3, 4, 5};
+      
+      for (int permutation = 0; permutation < totalPermutations; ++permutation) {
+        System.arraycopy(inputArray, 0, permutations[permutation], 0, 5);
+        for (int i = 0; i < permutation; ++i) {
+          Permutations.lexiographicPermute(inputArray, new StandardPermutator());
+        }       
+      }      
+    }
+    
+    @Before 
+    public void beforeTest() {
+        sorter = new FiveElementSort(); 
+    }
+      
+    @Test
+    public void timeSortCharArray() {    
+      for (int permutation = 0; permutation < totalPermutations; ++permutation) {        
+        sorter.sort(permutations[permutation], 0, 5);  
+        Assert.assertArrayEquals(permutations[permutation], new char[] {1, 2, 3, 4, 5});
+      }
+    }
 
   @Test
   public void testSortCharArray() {
