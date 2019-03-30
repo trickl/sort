@@ -20,7 +20,13 @@ before_deploy:
 - export project_version=$(mvn help:evaluate -N -Dexpression=project.version|grep
   -v '\[')
 deploy:
-  provider: releases
+- provider: script
+  script: ".travis/deploy.sh"
+  skip_cleanup: true
+  on:
+    repo: trickl/sort
+    all_branches: true
+- provider: releases
   api_key:
     secure: AIsVIVXvqgHfRUzsZgsUxsKPhAorz1ir6nKWzifTnp1fKqNpL8Pq7YkQCk3oT5NK17ifwZJtPgCZIimm31h7UuRHpd9bezje8HiDD7X0k1mPyeHAQox67OYPwmL951SeWnmxToAZSrn3xUlwRfonPbYaeDPA+XtcV1xwOF5MnK8n6Zo2nKuKfV0LLr6MOuDshtcMafsvP36+8JOulbGRrmGh8LNN9/4PPY6CPSNx+aDaGvJvySGhQjG9xnBpKTG/xleZQDyCdcNBs1ZZFEIA/yMyq0hHLmnkiO/VU3oqDoO0MPCOxyKsS4r2MNMH8AOr9dLV88cb9YKXe38KnCcamjzs4RLGCY2azSpzcAVMjihHI1VqjrBrfHV6CXlLP0xB4QDr8WmyBR2zYa4C6prUBAISiZT/MYZW7f19E/vi8rL7+fA/4a/bzkn9mQTOC1e8mrX2lkFvu3mRdP3yCYbAGDGM0XXW7hyT3Y1KG3tnJgQxEJlrQxIvkC3YE+szCXB7Q7cPDkmhXArU4Mz0HMyVD/XaAo8w+ScQDKr6ffL57wNZVut3YcSr+RALhbfMwwwQq6sgPeFNFuQXMpEhQv1goRDYsr2RacpR6iiKPcv66sMsRmxjr/bAf4uqQukr4wIUFONOrZbM+bx0s8iKN3jLBN/h+aE1SqeBXJvTrVyZslg=
   file: ".travis.yml"
