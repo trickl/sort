@@ -8,6 +8,7 @@ import java.util.Comparator;
  * An optimal five element sort that only uses seven comparisons.
  *
  * @author tgee
+ * @version $Id: $Id
  */
 public class FiveElementSort implements Sorter {
 
@@ -16,12 +17,9 @@ public class FiveElementSort implements Sorter {
   private Permutator permutator = new StandardPermutator();
 
   /**
-   * Sort a range in the array.
+   * {@inheritDoc}
    *
-   * @param arr The array
-   * @param start The index of the first element in the range to sort
-   * @param end Unused, instead start + 4 is always the last element in the range.
-   * @return The array
+   * Sort a range in the array.
    */
   @Override
   public char[] sort(char[] arr, int start, int end) {
@@ -138,12 +136,9 @@ public class FiveElementSort implements Sorter {
   }
 
   /**
-   * Sort a range in the array.
+   * {@inheritDoc}
    *
-   * @param arr The array
-   * @param start The index of the first element in the range to sort
-   * @param end Unused, instead start + 4 is always the last element in the range.
-   * @return The array
+   * Sort a range in the array.
    */
   @Override
   public short[] sort(short[] arr, int start, int end) {
@@ -260,12 +255,9 @@ public class FiveElementSort implements Sorter {
   }
 
   /**
-   * Sort a range in the array.
+   * {@inheritDoc}
    *
-   * @param arr The array
-   * @param start The index of the first element in the range to sort
-   * @param end Unused, instead start + 4 is always the last element in the range.
-   * @return The array
+   * Sort a range in the array.
    */
   @Override
   public double[] sort(double[] arr, int start, int end) {
@@ -382,12 +374,9 @@ public class FiveElementSort implements Sorter {
   }
 
   /**
-   * Sort a range in the array.
+   * {@inheritDoc}
    *
-   * @param arr The array
-   * @param start The index of the first element in the range to sort
-   * @param end Unused, instead start + 4 is always the last element in the range.
-   * @return The array
+   * Sort a range in the array.
    */
   @Override
   public float[] sort(float[] arr, int start, int end) {
@@ -504,12 +493,9 @@ public class FiveElementSort implements Sorter {
   }
 
   /**
-   * Sort a range in the array.
+   * {@inheritDoc}
    *
-   * @param arr The array
-   * @param start The index of the first element in the range to sort
-   * @param end Unused, instead start + 4 is always the last element in the range.
-   * @return The array
+   * Sort a range in the array.
    */
   @Override
   public int[] sort(int[] arr, int start, int end) {
@@ -625,14 +611,9 @@ public class FiveElementSort implements Sorter {
   }
 
   /**
-   * Sort a range in the array.
+   * {@inheritDoc}
    *
-   * @param <T> The data type of the array
-   * @param arr The array
-   * @param start The index of the first element in the range to sort
-   * @param end Unused, instead start + 4 is always the last element in the range.
-   * @param comparator The comparator to define the sort order
-   * @return The array
+   * Sort a range in the array.
    */
   @Override
   public <T> T[] sort(T[] arr, int start, int end, Comparator<T> comparator) {

@@ -8,6 +8,7 @@ import java.util.Comparator;
  * http://en.wikipedia.org/wiki/Insertion_sort
  *
  * @author tgee
+ * @version $Id: $Id
  */
 public class InsertionSort {
 
@@ -121,6 +122,7 @@ public class InsertionSort {
    * @param start The index of the first element in the range to sort
    * @param end The index of the last element in the range to sort
    * @return The array
+   * @param comparator a {@link java.util.Comparator} object.
    */
   public <T> T[] sort(T[] arr, int start, int end, Comparator<T> comparator) {
     if (comparator == null) {

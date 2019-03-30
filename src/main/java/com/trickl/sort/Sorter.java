@@ -6,6 +6,7 @@ import java.util.Comparator;
  * Defines a standard interface for many sorting algorithms.
  *
  * @author tgee
+ * @version $Id: $Id
  */
 public interface Sorter {
   /**

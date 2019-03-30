@@ -5,11 +5,12 @@ import com.trickl.math.StandardPermutator;
 import java.util.Comparator;
 
 /**
- * A partitioner that divides the data set into two sets according to a pivot. 
- * A : a &lt; pivot B : * b >= pivot 
+ * A partitioner that divides the data set into two sets according to a pivot.
+ * A : a &lt; pivot B : * b &gt;= pivot
  * Note: values equal to the pivot are not guaranteed to be contiguous.
  *
  * @author tgee
+ * @version $Id: $Id
  */
 public final class GreaterOrEqualPartitioner {
 

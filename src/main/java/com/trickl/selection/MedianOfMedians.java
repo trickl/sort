@@ -18,6 +18,7 @@ import java.util.Comparator;
  * http://en.wikipedia.org/wiki/Selection_algorithm#Linear_general_selection_algorithm_-_Median_of_Medians_algorithm
  *
  * @author tgee
+ * @version $Id: $Id
  */
 public class MedianOfMedians implements SelectionAlgorithm {
 
@@ -27,14 +28,9 @@ public class MedianOfMedians implements SelectionAlgorithm {
   private static final ThreeWayPartitioner indexPairedPartitioner = new ThreeWayPartitioner();
 
   /**
-   * Select the kth element in the range of an array
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param freq The frequency of elements in the array, if null freq(element) = 1
-   * @param start The first element in the range
-   * @param end The last element in the range
-   * @param k
-   * @return The index of the kth element
+   * Select the kth element in the range of an array
    */
   @Override
   public int select(char[] S, int[] freq, int start, int end, int k) {
@@ -55,8 +51,9 @@ public class MedianOfMedians implements SelectionAlgorithm {
    * @param freq The frequency of elements in the array, if null freq(element) = 1
    * @param start The first element in the range
    * @param end The last element in the range
-   * @param k
+   * @param k a int.
    * @return The index of the kth element
+   * @param index an array of int.
    */
   protected int select(char[] S, int[] freq, int[] index, int start, int end, int k) {
 
@@ -82,14 +79,9 @@ public class MedianOfMedians implements SelectionAlgorithm {
   }
 
   /**
-   * Select the kth element in the range of an array
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param freq The frequency of elements in the array, if null freq(element) = 1
-   * @param start The first element in the range
-   * @param end The last element in the range
-   * @param k
-   * @return The index of the kth element
+   * Select the kth element in the range of an array
    */
   @Override
   public int select(short[] S, int[] freq, int start, int end, int k) {
@@ -110,8 +102,9 @@ public class MedianOfMedians implements SelectionAlgorithm {
    * @param freq The frequency of elements in the array, if null freq(element) = 1
    * @param start The first element in the range
    * @param end The last element in the range
-   * @param k
+   * @param k a int.
    * @return The index of the kth element
+   * @param index an array of int.
    */
   protected int select(short[] S, int[] freq, int[] index, int start, int end, int k) {
 
@@ -137,14 +130,9 @@ public class MedianOfMedians implements SelectionAlgorithm {
   }
 
   /**
-   * Select the kth element in the range of an array
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param freq The frequency of elements in the array, if null freq(element) = 1
-   * @param start The first element in the range
-   * @param end The last element in the range
-   * @param k
-   * @return The index of the kth element
+   * Select the kth element in the range of an array
    */
   @Override
   public int select(double[] S, int[] freq, int start, int end, int k) {
@@ -165,8 +153,9 @@ public class MedianOfMedians implements SelectionAlgorithm {
    * @param freq The frequency of elements in the array, if null freq(element) = 1
    * @param start The first element in the range
    * @param end The last element in the range
-   * @param k
+   * @param k a int.
    * @return The index of the kth element
+   * @param index an array of int.
    */
   protected int select(double[] S, int[] freq, int[] index, int start, int end, int k) {
 
@@ -192,14 +181,9 @@ public class MedianOfMedians implements SelectionAlgorithm {
   }
 
   /**
-   * Select the kth element in the range of an array
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param freq The frequency of elements in the array, if null freq(element) = 1
-   * @param start The first element in the range
-   * @param end The last element in the range
-   * @param k
-   * @return The index of the kth element
+   * Select the kth element in the range of an array
    */
   @Override
   public int select(float[] S, int[] freq, int start, int end, int k) {
@@ -220,8 +204,9 @@ public class MedianOfMedians implements SelectionAlgorithm {
    * @param freq The frequency of elements in the array, if null freq(element) = 1
    * @param start The first element in the range
    * @param end The last element in the range
-   * @param k
+   * @param k a int.
    * @return The index of the kth element
+   * @param index an array of int.
    */
   protected int select(float[] S, int[] freq, int[] index, int start, int end, int k) {
 
@@ -247,14 +232,9 @@ public class MedianOfMedians implements SelectionAlgorithm {
   }
 
   /**
-   * Select the kth element in the range of an array
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param freq The frequency of elements in the array, if null freq(element) = 1
-   * @param start The first element in the range
-   * @param end The last element in the range
-   * @param k
-   * @return The index of the kth element
+   * Select the kth element in the range of an array
    */
   @Override
   public int select(int[] S, int[] freq, int start, int end, int k) {
@@ -275,8 +255,9 @@ public class MedianOfMedians implements SelectionAlgorithm {
    * @param freq The frequency of elements in the array, if null freq(element) = 1
    * @param start The first element in the range
    * @param end The last element in the range
-   * @param k
+   * @param k a int.
    * @return The index of the kth element
+   * @param index an array of int.
    */
   protected int select(int[] S, int[] freq, int[] index, int start, int end, int k) {
 
@@ -302,14 +283,9 @@ public class MedianOfMedians implements SelectionAlgorithm {
   }
 
   /**
-   * Select the kth element in the range of an array
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param freq The frequency of elements in the array, if null freq(element) = 1
-   * @param start The first element in the range
-   * @param end The last element in the range
-   * @param k
-   * @return The index of the kth element
+   * Select the kth element in the range of an array
    */
   @Override
   public <T> int select(T[] S, int[] freq, int start, int end, int k, Comparator<T> comparator) {
@@ -332,8 +308,10 @@ public class MedianOfMedians implements SelectionAlgorithm {
    *     the partitioned data
    * @param start The first element in the range
    * @param end The last element in the range
-   * @param k
+   * @param k a int.
    * @return The index of the kth element
+   * @param comparator a {@link java.util.Comparator} object.
+   * @param <T> a T object.
    */
   protected <T> int select(
       T[] S, int[] freq, int[] index, int start, int end, int k, Comparator<T> comparator) {
@@ -614,6 +592,8 @@ public class MedianOfMedians implements SelectionAlgorithm {
    * @param low The first element in the range
    * @param high The last element in the range
    * @return The index of the kth element
+   * @param comparator a {@link java.util.Comparator} object.
+   * @param <T> a T object.
    */
   protected <T> int partitionByMedian(
       T[] S, int[] freq, int[] indices, int low, int high, Comparator<T> comparator) {

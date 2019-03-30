@@ -24,6 +24,7 @@ package com.trickl.math;
  * http://en.wikipedia.org/wiki/Quaternion
  *
  * @author tgee
+ * @version $Id: $Id
  */
 public class Quaternion {
 
@@ -32,10 +33,10 @@ public class Quaternion {
   /**
    * Create a quaternion
    *
-   * @param a
-   * @param b
-   * @param c
-   * @param d
+   * @param a a double.
+   * @param b a double.
+   * @param c a double.
+   * @param d a double.
    */
   public Quaternion(double a, double b, double c, double d) {
     this.a = a;
@@ -107,9 +108,9 @@ public class Quaternion {
   }
 
   /**
-   * Get the string representation of this quaternion, e.g. "1 + 2i + 3j + 4k".
+   * {@inheritDoc}
    *
-   * @return The string representation
+   * Get the string representation of this quaternion, e.g. "1 + 2i + 3j + 4k".
    */
   @Override
   public String toString() {

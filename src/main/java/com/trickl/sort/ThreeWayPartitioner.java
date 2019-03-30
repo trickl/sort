@@ -6,9 +6,10 @@ import java.util.Comparator;
 
 /**
  * A partitioner that divides the data set into three partitions according to a pivot.
- * A : a &lt; * pivot B : b = pivot C : c > pivot
+ * A : a &lt; * pivot B : b = pivot C : c &gt; pivot
  *
  * @author tgee
+ * @version $Id: $Id
  */
 public final class ThreeWayPartitioner {
 

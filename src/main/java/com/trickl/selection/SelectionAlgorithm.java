@@ -6,6 +6,7 @@ import java.util.Comparator;
  * http://en.wikipedia.org/wiki/Selection_algorithm
  *
  * @author tgee
+ * @version $Id: $Id
  */
 public interface SelectionAlgorithm {
   /**
@@ -15,7 +16,7 @@ public interface SelectionAlgorithm {
    * @param freq The frequency of elements in the array, if null freq(element) = 1
    * @param start The first element in the range
    * @param end The last element in the range
-   * @param k
+   * @param k a int.
    * @return The index of the kth element
    */
   int select(char[] arr, int[] freq, int start, int end, int k);
@@ -27,7 +28,7 @@ public interface SelectionAlgorithm {
    * @param freq The frequency of elements in the array, if null freq(element) = 1
    * @param start The first element in the range
    * @param end The last element in the range
-   * @param k
+   * @param k a int.
    * @return The index of the kth element
    */
   int select(short[] arr, int[] freq, int start, int end, int k);
@@ -39,7 +40,7 @@ public interface SelectionAlgorithm {
    * @param freq The frequency of elements in the array, if null freq(element) = 1
    * @param start The first element in the range
    * @param end The last element in the range
-   * @param k
+   * @param k a int.
    * @return The index of the kth element
    */
   int select(double[] arr, int[] freq, int start, int end, int k);
@@ -51,7 +52,7 @@ public interface SelectionAlgorithm {
    * @param freq The frequency of elements in the array, if null freq(element) = 1
    * @param start The first element in the range
    * @param end The last element in the range
-   * @param k
+   * @param k a int.
    * @return The index of the kth element
    */
   int select(float[] arr, int[] freq, int start, int end, int k);
@@ -63,7 +64,7 @@ public interface SelectionAlgorithm {
    * @param freq The frequency of elements in the array, if null freq(element) = 1
    * @param start The first element in the range
    * @param end The last element in the range
-   * @param k
+   * @param k a int.
    * @return The index of the kth element
    */
   int select(int[] arr, int[] freq, int start, int end, int k);
@@ -75,8 +76,10 @@ public interface SelectionAlgorithm {
    * @param freq The frequency of elements in the array, if null freq(element) = 1
    * @param start The first element in the range
    * @param end The last element in the range
-   * @param k
+   * @param k a int.
    * @return The index of the kth element
+   * @param comparator a {@link java.util.Comparator} object.
+   * @param <T> a T object.
    */
   <T> int select(T[] arr, int[] freq, int start, int end, int k, Comparator<T> comparator);
 }

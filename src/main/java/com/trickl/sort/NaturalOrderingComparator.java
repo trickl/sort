@@ -7,15 +7,14 @@ import java.util.Comparator;
  *
  * @author tgee
  * @param <T> type of element
+ * @version $Id: $Id
  */
 public class NaturalOrderingComparator<T> implements Comparator<T> {
 
   /**
-   * Compare two elements.
+   * {@inheritDoc}
    *
-   * @param lhs Left hand side
-   * @param rhs Right hand side
-   * @return 1 if lhs > rhs, 0 if lhs == rhs, -1 if lhs < rhs
+   * Compare two elements.
    */
   @Override
   public int compare(T lhs, T rhs) {

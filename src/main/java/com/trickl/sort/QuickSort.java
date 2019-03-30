@@ -8,6 +8,7 @@ import java.util.Comparator;
  * http://en.wikipedia.org/wiki/Quicksort.
  *
  * @author tgee
+ * @version $Id: $Id
  */
 public final class QuickSort implements Sorter {
 
@@ -18,12 +19,9 @@ public final class QuickSort implements Sorter {
   private Permutator permutator = new StandardPermutator();
 
   /**
-   * Sort a range in the array.
+   * {@inheritDoc}
    *
-   * @param arr The array
-   * @param start The index of the first element in the range to sort
-   * @param end The index of the last element in the range to sort
-   * @return The array
+   * Sort a range in the array.
    */
   @Override
   public char[] sort(char[] arr, int start, int end) {
@@ -50,12 +48,9 @@ public final class QuickSort implements Sorter {
   }
 
   /**
-   * Sort a range in the array.
+   * {@inheritDoc}
    *
-   * @param arr The array
-   * @param start The index of the first element in the range to sort
-   * @param end The index of the last element in the range to sort
-   * @return The array
+   * Sort a range in the array.
    */
   @Override
   public short[] sort(short[] arr, int start, int end) {
@@ -82,12 +77,9 @@ public final class QuickSort implements Sorter {
   }
 
   /**
-   * Sort a range in the array.
+   * {@inheritDoc}
    *
-   * @param arr The array
-   * @param start The index of the first element in the range to sort
-   * @param end The index of the last element in the range to sort
-   * @return The array
+   * Sort a range in the array.
    */
   @Override
   public double[] sort(double[] arr, int start, int end) {
@@ -114,12 +106,9 @@ public final class QuickSort implements Sorter {
   }
 
   /**
-   * Sort a range in the array.
+   * {@inheritDoc}
    *
-   * @param arr The array
-   * @param start The index of the first element in the range to sort
-   * @param end The index of the last element in the range to sort
-   * @return The array
+   * Sort a range in the array.
    */
   @Override
   public float[] sort(float[] arr, int start, int end) {
@@ -146,12 +135,9 @@ public final class QuickSort implements Sorter {
   }
 
   /**
-   * Sort a range in the array.
+   * {@inheritDoc}
    *
-   * @param arr The array
-   * @param start The index of the first element in the range to sort
-   * @param end The index of the last element in the range to sort
-   * @return The array
+   * Sort a range in the array.
    */
   @Override
   public int[] sort(int[] arr, int start, int end) {
@@ -178,13 +164,9 @@ public final class QuickSort implements Sorter {
   }
 
   /**
-   * Sort a range in the array.
+   * {@inheritDoc}
    *
-   * @param <T> The data type of the array
-   * @param arr The array
-   * @param start The index of the first element in the range to sort
-   * @param end The index of the last element in the range to sort
-   * @return The array
+   * Sort a range in the array.
    */
   @Override
   public <T> T[] sort(T[] arr, int start, int end, Comparator<T> comparator) {
@@ -215,13 +197,9 @@ public final class QuickSort implements Sorter {
   }
 
   /**
-   * Sort a range in the array.
+   * {@inheritDoc}
    *
-   * @param <T> The data type of the array
-   * @param arr The array
-   * @param start The index of the first element in the range to sort
-   * @param end The index of the last element in the range to sort
-   * @return The array
+   * Sort a range in the array.
    */
   public <T> T[] sort(T[] arr, int start, int end) {
     return sort(arr, start, end, null);

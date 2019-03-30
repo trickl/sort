@@ -24,16 +24,14 @@ package com.trickl.math;
  * The StandardPermutator simply reorders the elements in the array as requested.
  *
  * @author tgee
+ * @version $Id: $Id
  */
 public class StandardPermutator implements Permutator {
 
   /**
-   * Swap the elements in the array
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param first The index of the first element
-   * @param second The index of the second element
-   * @return The array
+   * Swap the elements in the array
    */
   @Override
   public short[] swap(short[] S, int first, int second) {
@@ -44,12 +42,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Swap the elements in the array
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param first The index of the first element
-   * @param second The index of the second element
-   * @return The array
+   * Swap the elements in the array
    */
   @Override
   public char[] swap(char[] S, int first, int second) {
@@ -60,12 +55,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Swap the elements in the array
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param first The index of the first element
-   * @param second The index of the second element
-   * @return The array
+   * Swap the elements in the array
    */
   @Override
   public double[] swap(double[] S, int first, int second) {
@@ -76,12 +68,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Swap the elements in the array
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param first The index of the first element
-   * @param second The index of the second element
-   * @return The array
+   * Swap the elements in the array
    */
   @Override
   public float[] swap(float[] S, int first, int second) {
@@ -92,12 +81,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Swap the elements in the array
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param first The index of the first element
-   * @param second The index of the second element
-   * @return The array
+   * Swap the elements in the array
    */
   @Override
   public int[] swap(int[] S, int first, int second) {
@@ -108,13 +94,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Swap the elements in the array
+   * {@inheritDoc}
    *
-   * @param <T> The data type of the array
-   * @param S The array
-   * @param first The index of the first element
-   * @param second The index of the second element
-   * @return The array
+   * Swap the elements in the array
    */
   @Override
   public <T> T[] swap(T[] S, int first, int second) {
@@ -125,13 +107,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Perform a three cycle permutation [1, 2, 3] -> [2, 3, 1]
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param first The index of the first element to swap
-   * @param second The index of the second element to swap
-   * @param third The index of the third element to swap
-   * @return The array
+   * Perform a three cycle permutation [1, 2, 3] -&gt; [2, 3, 1]
    */
   @Override
   public short[] cycle(short[] S, int first, int second, int third) {
@@ -143,13 +121,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Perform a three cycle permutation [1, 2, 3] -> [2, 3, 1]
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param first The index of the first element to swap
-   * @param second The index of the second element to swap
-   * @param third The index of the third element to swap
-   * @return The array
+   * Perform a three cycle permutation [1, 2, 3] -&gt; [2, 3, 1]
    */
   @Override
   public char[] cycle(char[] S, int first, int second, int third) {
@@ -161,13 +135,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Perform a three cycle permutation [1, 2, 3] -> [2, 3, 1]
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param first The index of the first element to swap
-   * @param second The index of the second element to swap
-   * @param third The index of the third element to swap
-   * @return The array
+   * Perform a three cycle permutation [1, 2, 3] -&gt; [2, 3, 1]
    */
   @Override
   public float[] cycle(float[] S, int first, int second, int third) {
@@ -179,13 +149,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Perform a three cycle permutation [1, 2, 3] -> [2, 3, 1]
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param first The index of the first element to swap
-   * @param second The index of the second element to swap
-   * @param third The index of the third element to swap
-   * @return The array
+   * Perform a three cycle permutation [1, 2, 3] -&gt; [2, 3, 1]
    */
   @Override
   public double[] cycle(double[] S, int first, int second, int third) {
@@ -197,13 +163,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Perform a three cycle permutation [1, 2, 3] -> [2, 3, 1]
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param first The index of the first element to swap
-   * @param second The index of the second element to swap
-   * @param third The index of the third element to swap
-   * @return The array
+   * Perform a three cycle permutation [1, 2, 3] -&gt; [2, 3, 1]
    */
   @Override
   public int[] cycle(int[] S, int first, int second, int third) {
@@ -215,14 +177,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Perform a three cycle permutation [1, 2, 3] -> [2, 3, 1]
+   * {@inheritDoc}
    *
-   * @param <T> The type of the array
-   * @param S The array
-   * @param first The index of the first element to swap
-   * @param second The index of the second element to swap
-   * @param third The index of the third element to swap
-   * @return The array
+   * Perform a three cycle permutation [1, 2, 3] -&gt; [2, 3, 1]
    */
   @Override
   public <T> T[] cycle(T[] S, int first, int second, int third) {
@@ -234,14 +191,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Perform a four cycle permutation [1, 2, 3, 4] -> [2, 3, 4, 1]
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param first The index of the first element to swap
-   * @param second The index of the second element to swap
-   * @param third The index of the third element to swap
-   * @param fourth The index of the fourth element to swap
-   * @return The array
+   * Perform a four cycle permutation [1, 2, 3, 4] -&gt; [2, 3, 4, 1]
    */
   @Override
   public short[] cycle(short[] S, int first, int second, int third, int fourth) {
@@ -254,14 +206,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Perform a four cycle permutation [1, 2, 3, 4] -> [2, 3, 4, 1]
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param first The index of the first element to swap
-   * @param second The index of the second element to swap
-   * @param third The index of the third element to swap
-   * @param fourth The index of the fourth element to swap
-   * @return The array
+   * Perform a four cycle permutation [1, 2, 3, 4] -&gt; [2, 3, 4, 1]
    */
   @Override
   public char[] cycle(char[] S, int first, int second, int third, int fourth) {
@@ -274,14 +221,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Perform a four cycle permutation [1, 2, 3, 4] -> [2, 3, 4, 1]
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param first The index of the first element to swap
-   * @param second The index of the second element to swap
-   * @param third The index of the third element to swap
-   * @param fourth The index of the fourth element to swap
-   * @return The array
+   * Perform a four cycle permutation [1, 2, 3, 4] -&gt; [2, 3, 4, 1]
    */
   @Override
   public float[] cycle(float[] S, int first, int second, int third, int fourth) {
@@ -294,14 +236,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Perform a four cycle permutation [1, 2, 3, 4] -> [2, 3, 4, 1]
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param first The index of the first element to swap
-   * @param second The index of the second element to swap
-   * @param third The index of the third element to swap
-   * @param fourth The index of the fourth element to swap
-   * @return The array
+   * Perform a four cycle permutation [1, 2, 3, 4] -&gt; [2, 3, 4, 1]
    */
   @Override
   public double[] cycle(double[] S, int first, int second, int third, int fourth) {
@@ -314,14 +251,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Perform a four cycle permutation [1, 2, 3, 4] -> [2, 3, 4, 1]
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param first The index of the first element to swap
-   * @param second The index of the second element to swap
-   * @param third The index of the third element to swap
-   * @param fourth The index of the fourth element to swap
-   * @return The array
+   * Perform a four cycle permutation [1, 2, 3, 4] -&gt; [2, 3, 4, 1]
    */
   @Override
   public int[] cycle(int[] S, int first, int second, int third, int fourth) {
@@ -334,15 +266,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Perform a four cycle permutation [1, 2, 3, 4] -> [2, 3, 4, 1]
+   * {@inheritDoc}
    *
-   * @param <T> The data type of the array
-   * @param S The array
-   * @param first The index of the first element to swap
-   * @param second The index of the second element to swap
-   * @param third The index of the third element to swap
-   * @param fourth The index of the fourth element to swap
-   * @return The array
+   * Perform a four cycle permutation [1, 2, 3, 4] -&gt; [2, 3, 4, 1]
    */
   @Override
   public <T> T[] cycle(T[] S, int first, int second, int third, int fourth) {
@@ -355,15 +281,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Perform a five cycle permutation [1, 2, 3, 4, 5] -> [2, 3, 4, 5, 1]
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param first The index of the first element to swap
-   * @param second The index of the second element to swap
-   * @param third The index of the third element to swap
-   * @param fourth The index of the fourth element to swap
-   * @param fifth The index of the fifth element to swap
-   * @return The array
+   * Perform a five cycle permutation [1, 2, 3, 4, 5] -&gt; [2, 3, 4, 5, 1]
    */
   @Override
   public short[] cycle(short[] S, int first, int second, int third, int fourth, int fifth) {
@@ -377,15 +297,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Perform a five cycle permutation [1, 2, 3, 4, 5] -> [2, 3, 4, 5, 1]
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param first The index of the first element to swap
-   * @param second The index of the second element to swap
-   * @param third The index of the third element to swap
-   * @param fourth The index of the fourth element to swap
-   * @param fifth The index of the fifth element to swap
-   * @return The array
+   * Perform a five cycle permutation [1, 2, 3, 4, 5] -&gt; [2, 3, 4, 5, 1]
    */
   @Override
   public char[] cycle(char[] S, int first, int second, int third, int fourth, int fifth) {
@@ -399,15 +313,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Perform a five cycle permutation [1, 2, 3, 4, 5] -> [2, 3, 4, 5, 1]
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param first The index of the first element to swap
-   * @param second The index of the second element to swap
-   * @param third The index of the third element to swap
-   * @param fourth The index of the fourth element to swap
-   * @param fifth The index of the fifth element to swap
-   * @return The array
+   * Perform a five cycle permutation [1, 2, 3, 4, 5] -&gt; [2, 3, 4, 5, 1]
    */
   @Override
   public float[] cycle(float[] S, int first, int second, int third, int fourth, int fifth) {
@@ -422,15 +330,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Perform a five cycle permutation [1, 2, 3, 4, 5] -> [2, 3, 4, 5, 1]
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param first The index of the first element to swap
-   * @param second The index of the second element to swap
-   * @param third The index of the third element to swap
-   * @param fourth The index of the fourth element to swap
-   * @param fifth The index of the fifth element to swap
-   * @return The array
+   * Perform a five cycle permutation [1, 2, 3, 4, 5] -&gt; [2, 3, 4, 5, 1]
    */
   @Override
   public double[] cycle(double[] S, int first, int second, int third, int fourth, int fifth) {
@@ -444,15 +346,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Perform a five cycle permutation [1, 2, 3, 4, 5] -> [2, 3, 4, 5, 1]
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param first The index of the first element to swap
-   * @param second The index of the second element to swap
-   * @param third The index of the third element to swap
-   * @param fourth The index of the fourth element to swap
-   * @param fifth The index of the fifth element to swap
-   * @return The array
+   * Perform a five cycle permutation [1, 2, 3, 4, 5] -&gt; [2, 3, 4, 5, 1]
    */
   @Override
   public int[] cycle(int[] S, int first, int second, int third, int fourth, int fifth) {
@@ -466,16 +362,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Perform a five cycle permutation [1, 2, 3, 4, 5] -> [2, 3, 4, 5, 1]
+   * {@inheritDoc}
    *
-   * @param <T> The data type of the array
-   * @param S The array
-   * @param first The index of the first element to swap
-   * @param second The index of the second element to swap
-   * @param third The index of the third element to swap
-   * @param fourth The index of the fourth element to swap
-   * @param fifth The index of the fifth element to swap
-   * @return The array
+   * Perform a five cycle permutation [1, 2, 3, 4, 5] -&gt; [2, 3, 4, 5, 1]
    */
   @Override
   public <T> T[] cycle(T[] S, int first, int second, int third, int fourth, int fifth) {
@@ -489,12 +378,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Reverse the elements in the array
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param start The first element in the range to be reversed
-   * @param end The last element in the range to be reversed
-   * @return The array
+   * Reverse the elements in the array
    */
   @Override
   public short[] reverse(short[] S, int start, int end) {
@@ -505,12 +391,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Reverse the elements in the array
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param start The first element in the range to be reversed
-   * @param end The last element in the range to be reversed
-   * @return The array
+   * Reverse the elements in the array
    */
   @Override
   public char[] reverse(char[] S, int start, int end) {
@@ -521,12 +404,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Reverse the elements in the array
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param start The first element in the range to be reversed
-   * @param end The last element in the range to be reversed
-   * @return The array
+   * Reverse the elements in the array
    */
   @Override
   public double[] reverse(double[] S, int start, int end) {
@@ -537,12 +417,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Reverse the elements in the array
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param start The first element in the range to be reversed
-   * @param end The last element in the range to be reversed
-   * @return The array
+   * Reverse the elements in the array
    */
   @Override
   public float[] reverse(float[] S, int start, int end) {
@@ -553,12 +430,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Reverse the elements in the array
+   * {@inheritDoc}
    *
-   * @param S The array
-   * @param start The first element in the range to be reversed
-   * @param end The last element in the range to be reversed
-   * @return The array
+   * Reverse the elements in the array
    */
   @Override
   public int[] reverse(int[] S, int start, int end) {
@@ -569,13 +443,9 @@ public class StandardPermutator implements Permutator {
   }
 
   /**
-   * Reverse the elements in the array
+   * {@inheritDoc}
    *
-   * @param <T> The data type of the array
-   * @param S The array
-   * @param start The first element in the range to be reversed
-   * @param end The last element in the range to be reversed
-   * @return The array
+   * Reverse the elements in the array
    */
   @Override
   public <T> T[] reverse(T[] S, int start, int end) {

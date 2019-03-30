@@ -13,9 +13,15 @@ package com.trickl.math;
  *
  * @deprecated Use ChainPermutator directly
  * @author tgee
+ * @version $Id: $Id
  */
 @Deprecated
 public class PairedPermutator extends ChainPermutator {
+  /**
+   * <p>Constructor for PairedPermutator.</p>
+   *
+   * @param pair an array of int.
+   */
   public PairedPermutator(int pair[]) {
     super(new IntArrayPermutator(pair), new StandardPermutator());
   }

@@ -4,12 +4,13 @@ package com.trickl.math;
  * Permutators are responsible for reordering the elements in arrays.
  *
  * @author tgee
+ * @version $Id: $Id
  */
 public interface Permutator {
 
   /**
    * Perform a three cycle permutation.
-   * [ 1, 2, 3 ] -> [ 2, 3, 1 ]
+   * [ 1, 2, 3 ] -&gt; [ 2, 3, 1 ]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -21,7 +22,7 @@ public interface Permutator {
 
   /**
    * Perform a three cycle permutation.
-   * [ 1, 2, 3 ] -> [ 2, 3, 1 ]
+   * [ 1, 2, 3 ] -&gt; [ 2, 3, 1 ]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -33,7 +34,7 @@ public interface Permutator {
 
   /**
    * Perform a three cycle permutation.
-   * [ 1, 2, 3 ] -> [ 2, 3, 1 ]
+   * [ 1, 2, 3 ] -&gt; [ 2, 3, 1 ]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -45,7 +46,7 @@ public interface Permutator {
 
   /**
    * Perform a three cycle permutation.
-   * [ 1, 2, 3 ] -> [ 2, 3, 1 ]
+   * [ 1, 2, 3 ] -&gt; [ 2, 3, 1 ]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -57,7 +58,7 @@ public interface Permutator {
 
   /**
    * Perform a three cycle permutation.
-   * [ 1, 2, 3 ] -> [ 2, 3, 1 ]
+   * [ 1, 2, 3 ] -&gt; [ 2, 3, 1 ]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -69,7 +70,7 @@ public interface Permutator {
 
   /**
    * Perform a three cycle permutation.
-   * [ 1, 2, 3 ] -> [ 2, 3, 1 ]
+   * [ 1, 2, 3 ] -&gt; [ 2, 3, 1 ]
    *
    * @param <T> The type of the array
    * @param S The array
@@ -82,7 +83,7 @@ public interface Permutator {
 
   /**
    * Perform a four cycle permutation.
-   * [ 1, 2, 3, 4] -> [ 2, 3, 4, 1]
+   * [ 1, 2, 3, 4] -&gt; [ 2, 3, 4, 1]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -95,7 +96,7 @@ public interface Permutator {
 
   /**
    * Perform a four cycle permutation.
-   * [ 1, 2, 3, 4] -> [ 2, 3, 4, 1]
+   * [ 1, 2, 3, 4] -&gt; [ 2, 3, 4, 1]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -107,7 +108,7 @@ public interface Permutator {
   char[] cycle(char[] S, int first, int second, int third, int fourth);
 
   /**
-   * Perform a four cycle permutation [ 1, 2, 3, 4] -> [ 2, 3, 4, 1]
+   * Perform a four cycle permutation [ 1, 2, 3, 4] -&gt; [ 2, 3, 4, 1]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -119,7 +120,7 @@ public interface Permutator {
   float[] cycle(float[] S, int first, int second, int third, int fourth);
 
   /**
-   * Perform a four cycle permutation [ 1, 2, 3, 4] -> [ 2, 3, 4, 1]
+   * Perform a four cycle permutation [ 1, 2, 3, 4] -&gt; [ 2, 3, 4, 1]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -131,7 +132,7 @@ public interface Permutator {
   double[] cycle(double[] S, int first, int second, int third, int fourth);
 
   /**
-   * Perform a four cycle permutation [ 1, 2, 3, 4] -> [ 2, 3, 4, 1]
+   * Perform a four cycle permutation [ 1, 2, 3, 4] -&gt; [ 2, 3, 4, 1]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -143,7 +144,7 @@ public interface Permutator {
   int[] cycle(int[] S, int first, int second, int third, int fourth);
 
   /**
-   * Perform a four cycle permutation [ 1, 2, 3, 4] -> [ 2, 3, 4, 1]
+   * Perform a four cycle permutation [ 1, 2, 3, 4] -&gt; [ 2, 3, 4, 1]
    *
    * @param <T> The type of the array
    * @param S The array
@@ -156,7 +157,7 @@ public interface Permutator {
   <T> T[] cycle(T[] S, int first, int second, int third, int fourth);
 
   /**
-   * Perform a five cycle permutation [ 1, 2, 3, 4, 5] -> [ 2, 3, 4, 5, 1]
+   * Perform a five cycle permutation [ 1, 2, 3, 4, 5] -&gt; [ 2, 3, 4, 5, 1]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -169,7 +170,7 @@ public interface Permutator {
   short[] cycle(short[] S, int first, int second, int third, int fourth, int fifth);
 
   /**
-   * Perform a five cycle permutation [ 1, 2, 3, 4, 5] -> [ 2, 3, 4, 5, 1]
+   * Perform a five cycle permutation [ 1, 2, 3, 4, 5] -&gt; [ 2, 3, 4, 5, 1]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -182,7 +183,7 @@ public interface Permutator {
   char[] cycle(char[] S, int first, int second, int third, int fourth, int fifth);
 
   /**
-   * Perform a five cycle permutation [ 1, 2, 3, 4, 5] -> [ 2, 3, 4, 5, 1]
+   * Perform a five cycle permutation [ 1, 2, 3, 4, 5] -&gt; [ 2, 3, 4, 5, 1]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -195,7 +196,7 @@ public interface Permutator {
   float[] cycle(float[] S, int first, int second, int third, int fourth, int fifth);
 
   /**
-   * Perform a five cycle permutation [ 1, 2, 3, 4, 5] -> [ 2, 3, 4, 5, 1]
+   * Perform a five cycle permutation [ 1, 2, 3, 4, 5] -&gt; [ 2, 3, 4, 5, 1]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -208,7 +209,7 @@ public interface Permutator {
   double[] cycle(double[] S, int first, int second, int third, int fourth, int fifth);
 
   /**
-   * Perform a five cycle permutation [ 1, 2, 3, 4, 5] -> [ 2, 3, 4, 5, 1]
+   * Perform a five cycle permutation [ 1, 2, 3, 4, 5] -&gt; [ 2, 3, 4, 5, 1]
    *
    * @param S The array
    * @param first The index of the first element to swap
@@ -221,7 +222,7 @@ public interface Permutator {
   int[] cycle(int[] S, int first, int second, int third, int fourth, int fifth);
 
   /**
-   * Perform a five cycle permutation [ 1, 2, 3, 4, 5] -> [ 2, 3, 4, 5, 1]
+   * Perform a five cycle permutation [ 1, 2, 3, 4, 5] -&gt; [ 2, 3, 4, 5, 1]
    *
    * @param <T> The data type of the array
    * @param S The array

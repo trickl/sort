@@ -12,6 +12,7 @@ import java.util.Map;
  * algorithm.
  *
  * @author tgee
+ * @version $Id: $Id
  */
 public final class Selection {
   private static final NaturalOrderingComparator naturalOrderingComparator =
@@ -24,7 +25,7 @@ public final class Selection {
    *
    * @param S The array
    * @param freq The frequency of elements in the array
-   * @param k
+   * @param k a int.
    * @param selectionAlgorithm The algorithm to perform selection with
    * @return A size k array with the elements
    */
@@ -67,7 +68,7 @@ public final class Selection {
    *
    * @param S The array
    * @param freq The frequency of elements in the array
-   * @param k
+   * @param k a int.
    * @param selectionAlgorithm The algorithm to perform selection with
    * @return A size k array with the elements
    */
@@ -110,7 +111,7 @@ public final class Selection {
    *
    * @param S The array
    * @param freq The frequency of elements in the array
-   * @param k
+   * @param k a int.
    * @param selectionAlgorithm The algorithm to perform selection with
    * @return A size k array with the elements
    */
@@ -153,7 +154,7 @@ public final class Selection {
    *
    * @param S The array
    * @param freq The frequency of elements in the array
-   * @param k
+   * @param k a int.
    * @param selectionAlgorithm The algorithm to perform selection with
    * @return A size k array with the elements
    */
@@ -196,7 +197,7 @@ public final class Selection {
    *
    * @param S The array
    * @param freq The frequency of elements in the array
-   * @param k
+   * @param k a int.
    * @param selectionAlgorithm The algorithm to perform selection with
    * @return A size k array with the elements
    */
@@ -239,9 +240,11 @@ public final class Selection {
    *
    * @param S The array
    * @param freq The frequency of elements in the array
-   * @param k
+   * @param k a int.
    * @param selectionAlgorithm The algorithm to perform selection with
    * @return A size k array with the elements
+   * @param comparator a {@link java.util.Comparator} object.
+   * @param <T> a T object.
    */
   public static <T> int[] selectLast(
       T[] S,
@@ -257,9 +260,10 @@ public final class Selection {
    *
    * @param S The array
    * @param freq The frequency of elements in the array
-   * @param k
+   * @param k a int.
    * @param selectionAlgorithm The algorithm to perform selection with
    * @return A size k array with the elements
+   * @param <T> a T object.
    */
   public static <T> int[] selectFirst(
       char[] S, int[] freq, int k, SelectionAlgorithm selectionAlgorithm) {
@@ -299,9 +303,10 @@ public final class Selection {
    *
    * @param S The array
    * @param freq The frequency of elements in the array
-   * @param k
+   * @param k a int.
    * @param selectionAlgorithm The algorithm to perform selection with
    * @return A size k array with the elements
+   * @param <T> a T object.
    */
   public static <T> int[] selectFirst(
       short[] S, int[] freq, int k, SelectionAlgorithm selectionAlgorithm) {
@@ -341,9 +346,10 @@ public final class Selection {
    *
    * @param S The array
    * @param freq The frequency of elements in the array
-   * @param k
+   * @param k a int.
    * @param selectionAlgorithm The algorithm to perform selection with
    * @return A size k array with the elements
+   * @param <T> a T object.
    */
   public static <T> int[] selectFirst(
       double[] S, int[] freq, int k, SelectionAlgorithm selectionAlgorithm) {
@@ -383,9 +389,10 @@ public final class Selection {
    *
    * @param S The array
    * @param freq The frequency of elements in the array
-   * @param k
+   * @param k a int.
    * @param selectionAlgorithm The algorithm to perform selection with
    * @return A size k array with the elements
+   * @param <T> a T object.
    */
   public static <T> int[] selectFirst(
       float[] S, int[] freq, int k, SelectionAlgorithm selectionAlgorithm) {
@@ -425,9 +432,10 @@ public final class Selection {
    *
    * @param S The array
    * @param freq The frequency of elements in the array
-   * @param k
+   * @param k a int.
    * @param selectionAlgorithm The algorithm to perform selection with
    * @return A size k array with the elements
+   * @param <T> a T object.
    */
   public static <T> int[] selectFirst(
       int[] S, int[] freq, int k, SelectionAlgorithm selectionAlgorithm) {
@@ -467,9 +475,11 @@ public final class Selection {
    *
    * @param S The array
    * @param freq The frequency of elements in the array
-   * @param k
+   * @param k a int.
    * @param selectionAlgorithm The algorithm to perform selection with
    * @return A size k array with the elements
+   * @param comparator a {@link java.util.Comparator} object.
+   * @param <T> a T object.
    */
   public static <T> int[] selectFirst(
       T[] S, int[] freq, int k, Comparator<T> comparator, SelectionAlgorithm selectionAlgorithm) {
