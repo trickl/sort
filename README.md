@@ -1,5 +1,5 @@
 # Trickl Sort
-
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.trickl/sort/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.trickl/sort)
 [![build_status](https://travis-ci.com/trickl/sort.svg?branch=master)](https://travis-ci.com/trickl/sort)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c50441e8e5e10b31803f/maintainability)](https://codeclimate.com/github/trickl/sort/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/c50441e8e5e10b31803f/test_coverage)](https://codeclimate.com/github/trickl/sort/test_coverage)
@@ -12,15 +12,24 @@ Specialised sorting and selection algorithms -
 * Ability to use a specialized permutator in sorting algorithms.
   e.g. - A paired permutator, which allows users to efficiently simultaneously sort an array and generate the sort rank at the same time.
 
-### Prerequisites
+Installation
+============
 
-Requires Maven and a Java 8 compiler installed on your system.
+To install from Maven Central:
+
+```xml
+<dependency>
+  <groupId>com.github.trickl</groupId>
+  <artifactId>sort</artifactId>
+  <version>0.1.1</version>
+</dependency>
+```
 
 ## Usage
 
 See the Junit tests for usage
 
-### Installing
+### Building
 
 To download the library into a folder called "sort" run
 
